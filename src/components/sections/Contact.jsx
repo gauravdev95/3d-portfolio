@@ -111,9 +111,9 @@ const Contact = () => {
     emailjs
       .sendForm(
         "service_tox7kqs",
-        "template_nv7k7mj",
+        "template7k7mj",
         form.current,
-        "SybVGsYS52j2TfLbi"
+        "SybVGsYS5TfLbi"
       )
       .then(
         (result) => {
