@@ -215,10 +215,10 @@ export const experiences = [
 {
   id: 0,
   img: UMNP,
-  role: "Backend Engineer Intern",
-  company: "UMNP INTERNSHIP",
-  date: "June 2025 - July 2025",
-  desc: "During my internship at Unified Mentor, I worked on building real-time messaging functionality using Socket.IO integrated with a Node.js and Express.js backend...",
+  role: "Frontend Engineer Intern",
+  company: "IBM SkillsBuild",
+  date: "June 2025 - Aug 2025",
+  desc: "Worked on responsive UI development using HTML, CSS, JavaScript, and React. Built layouts using Flexbox/Grid and developed clean, reusable UI components..",
   skills: [
     "Express",
     "Nodejs",
@@ -228,7 +228,7 @@ export const experiences = [
     "CSS",
     "JavaScript"
   ],
-  doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202024-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058"
+  doc: "https://media.licdn.com/dms/image/v2/C4E0BAQGrqkmRcOH4KQ/company-logo_200_200/company-logo_200_200/0/1645014281175/ibm_cloud_logo?e=2147483647&v=beta&t=QlRXXpcQ9eXqBgtKbohgVxIKoCte9dcWCerC8I2b9bs"
 }, 
  
 {
