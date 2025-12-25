@@ -1,18 +1,22 @@
 import UMNP from "../images/UMNP.png";
+
 export const Bio = {
   name: "Gaurav Yadav",
   roles: [
-    "Full Stack Developer",
+    "Full Stack Developer ",
+    "AI & ML Enthusiast",
+    "Backend Engineer",
     "Programmer",
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "I am a motivated Full Stack Developer with a strong interest in Artificial Intelligence and Machine Learning integration. I enjoy building scalable web applications and enhancing them with intelligent features such as automation, data-driven decision systems, and real-time communication. With a growth mindset and passion for continuous learning, I strive to deliver impactful, production-ready solutions.",
   github: "https://github.com/gaurav-opensource",
-  resume:"https://drive.google.com/file/d/1Prd2qy01yi5PsjfZwlAG2PU7hBq72zvq/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1Prd2qy01yi5PsjfZwlAG2PU7hBq72zvq/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
   twitter: "https://twitter.com/@gaurav9536webde",
   facebook: "https://www.facebook.com/rishav.chanda.165/",
 };
+
 
 export const skills = [
   {
@@ -53,15 +57,15 @@ export const skills = [
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       },
+       {
+        name: "Tailwind CSS",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5_2e69uOtFDyshw054-c6MX74M3hy8m3ug&s",
+      },
       {
         name: "Material UI",
         image:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAh1BMVEX///8Af/8Ad/8AfP8Aev/v+P8Adf8Ae/+Puv8Adv+72P8Ac/87k/8Agf/t9f/6/f/U5v+lyf/m8f+10//H3v/C2/9Tnf9npv/e7P+w0P9+s/9Il/+Ywf8rjP8xkP/A2f8ch//Q4/9zrf94r/+HuP+dxP8JhP9aoP/a6f9Mmv+py/+Tv/8Ab/9IeMWVAAAHEElEQVR4nO2d6XqqMBBAJUQodcG1tlqpS2tre9//+W6oWgWyTAiB4DfnNwaOZiQkk6HTQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQZCm2X5Pu3Wda/Y91zl8Mhoan3KY9AghD8btQJgeAhL5YMVtEgTRp+GXHx9Cj0EGU7N2AHz1g/RUXm8EOry76PnsaHqIjc76SrwTQQI7b1nO18vw+5Djx4SeDifvRuc9ns/KzhsszDu8kFcSXk7kRerfZLsmf9e1MTpx8ifoeSH5MWpLzOOBXE/jEVVYxX+/9q+h0alvBW2F4tcq8DwNwb/eWb0g6z79qkOxuwty55ALjtYke3i1gp7fW1R6V/ygNHcGqWA30zttCLJQjF6Nmrzl7UAK7csEx1FYOLxyQXYFhzejRi8854JPKbjjHW9BkN0VV89GzabE+3zwqQTnPd7hVgRZKO4MQzH3XwgRXBT7pzVBNkaiHwbtzjec4FMJ9rkXY0vQJBQnT4X/QhcF2eitVCjGS5meS4Kp4l47FMe+KPgcFNQPxVl+INKw4FolmIYi/ClcHnyOCrJ+eoSFYvweAZpzTzBVXAKeq79VweeuYBqKY0VL23UEa0pXMKxFkF3WeiZpZ/gpGJeZCw5qEmSjt6eJqJl3zlNARYJ0UZdgqsgPxRdg8JUR9CPht1q9IPs6ve9CE9sEGnwlBKm/NfLTFfS8KBeKw+IjeHWCoi5jU5Cd9POm0zwEGsGnKxj1zZ9K9QXT6cX38/c6HSjHZeUFqfdirFdO8DcUmeKsz52RqEawgt5pIMgukhwoKftZkeDq2mAVcyZGgiYIBZeXu001vfOXTf1+YsHJqctX1TvdE+zMCQ1pZb3TQcHO8Gex11oDbptg9aAgCrZX0De5Rco+7IYgJUk/LDPSPH14nRTXBZ0SjH4nfKHTSFnYjZp9OP4RPSa6IEjPuRvxkug+DvnBZWZjKjB0QfA60TN5gs8m/V795vpAfOR/0gHBcHdzyEyyEpYnO9H/zf+gA4I0m7umXE45k1+qeXRA8AARVC6InSiMktsjyELxqFLkLJe2SVC+KJ0GHyf3ZNoqQW5OzxlB9lDbBDvxjt9Pg/4X9/jWCfJTe8QZfC0UZH8cuanQMBDnYLZSMJvbyoJPkkXbUsFOd3EZvUXyPGhTwfnuacmPbjhlBDudUcIUfeIrZi/NBFm8hz7tmeRbdcoKsms/HhJlArSJYPfyj92TLSyrGZQUBGEgeL3n+k9G1+CmYHbUZHQNVgVfygk+Z8e9Zmkk7gnG+1w20Z0JFp8970qQN3twT4LchIY7Elxwj78fwck/7uH3Iyg4/H4EBbOMZoLcJlEQxvNKb2a7ZYLCnT13Iije2XMXgtL1DJHguDWCis0FbRdULmS0XFC9FFWrIP+7Li8I2NkjFuR/My4Jgnb2tFcwfodlkLZVEJySUatg2XnRAjPwzh5hLQsrgntuo9qCk0/45gJ/JWjEiuCQcrfTaApq7ewR1pP5sCHYeeYNqvQEtXb2UF84FW9HkHtn1hEc6ezs8SNJOrYtQc7YCi6otbNHtn/NpmDxBg0W1NrZI9+BaFUw/3wDFNTa2UND1R5Sq4Lpn/S1fQqpfTRKNHb2QPZCWBZkofi36hEAUvvn/zSCD7SP27Zgmq91mkYJ14CDBXlaPMgGtBfCvmAaigGlwQZSfwwsSAlwmb0OQfbHsVzCKnMBBf0AXJimHkEwMMFgBc8DeW2foF6dNn5BIIcFQ16KpZihYETrqqA8y4sDvw6Cs4KKLK8CbwPRoM9JQV+zSGK+/KHrgv5Ga49qV7hO46og0coRFKdKuyroJxrtyJPd3RQM4RVSLsPfdgn6R2AboA0nDgp6FDb8HMuDz2FBUB+FrNO4KugRZf1v2DqNs4Kqis/xErwr0bAMdXlUY1HZk8TYg08V11Smvoj6aUJUfF1nx6VH9QZFFQJ4HuQWX59oVGBLW2jKD/ZEHxY6mNY6TbQ2rMllAnBOJlv7Rm+dprqyOWUAz6pFyeVngJc/9G5LYzXEF7dmNI/zs73OImmuuFkzaJSDCnv9Rb/XluC7MNGJJz/UKDfAKzDYBJzC+1VQac0qQ0YlS8dJ9aSLpLVTrvifGNUiaQP86Px5KKBEtUjaBJWFIqxUchNoJVqI9Y5OBV+WqWcaijrlyhvhQbt00C00NNyLXAPDhV7poBvKvDKgCbTSLm7oVVqt0Spl7orOB18W3VA0e/FKE2gmr5m+OqcJ4APUakul1sgLKBTJ4bHpCy2PeoAaBtW9gKwJFKHYzuDLIhugRoIiUC1jKpigr+ONqjXBuyvaexFnExQGqHZfpdoE2ddt2H4ZbiNcB6hk0OhcvD1OoRhGD47OSJjDQrF3d8GXw+H5FgRBEARBEARBEARBEARBEARBEARBEARBEMZ/Z7h0SlKcxhsAAAAASUVORK5CYII=",
-      },
-      {
-        name: "Flutter",
-        image:
-          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
       },
     ],
   },
@@ -83,8 +87,12 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
-      
-     
+
+       {
+        name: "Flask",
+        image:
+          "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-to-send-sms-messages-with-python-flask-and-vonage/python-flash_sms.png",
+      },
       {
         name: "MySQL",
         image:
@@ -112,38 +120,13 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       },
+        {
+        name: "kubernetes",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJo2OVHWB8E3LptzORARoUMdZCj2Wdwq3Rrg&s",
+      },
     ],
   },
-  // {
-  //   title: "Android",
-  //   skills: [
-  //     {
-  //       name: "Java",
-  //       image:
-  //         "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-  //     },
-  //     {
-  //       name: "Kotlin",
-  //       image:
-  //         "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
-  //     },
-  //     {
-  //       name: "Jetpack Compose",
-  //       image:
-  //         "https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png",
-  //     },
-  //     {
-  //       name: "XML",
-  //       image:
-  //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
-  //     },
-  //     {
-  //       name: "Android Studio",
-  //       image:
-  //         "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
-  //     },
-  //   ],
-  // },
   {
     title: "Machine Learning",
     skills: [
@@ -190,7 +173,7 @@ export const skills = [
       {
         name: "Netlify",
         image:
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_4grirF1RQ1aP2_QBZlII_Ly3ldBHNszIkg&s",
       },
       {
         name: "VS Code",
@@ -211,35 +194,64 @@ export const skills = [
   },
 ];
 
-export const experiences = [ 
-{
-  id: 0,
-  img: UMNP,
-  role: "Frontend Engineer Intern",
-  company: "IBM SkillsBuild",
-  date: "June 2025 - Aug 2025",
-  desc: "Worked on responsive UI development using HTML, CSS, JavaScript, and React. Built layouts using Flexbox/Grid and developed clean, reusable UI components..",
-  skills: [
-    "Express",
-    "Nodejs",
-    "Mongodb",
-    "Material UI",
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  doc: "https://media.licdn.com/dms/image/v2/C4E0BAQGrqkmRcOH4KQ/company-logo_200_200/company-logo_200_200/0/1645014281175/ibm_cloud_logo?e=2147483647&v=beta&t=QlRXXpcQ9eXqBgtKbohgVxIKoCte9dcWCerC8I2b9bs"
-}, 
- 
-{
+export const experiences = [
+  {
+    id: 0,
+    img: "https://s3-alpha.figma.com/hub/file/6351831159/978d1f2d-1f99-4244-b39a-1b5769efb983-cover.png",
+    role: "Web Development Intern",
+    company: "CodSoft",
+    date: "Dec 2025 – Present",
+    desc: "Working on backend development at CodSoft, building REST APIs, managing databases, and implementing server-side logic while collaborating with a remote development team.",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+      "JavaScript",
+      "Git",
+      "GitHub"
+    ],
+    doc: ""
+  },
+
+  {
+    id: 1,
+    img: "https://substackcdn.com/image/fetch/$s_!aFzv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa27a43b7-f1ec-4586-9898-5f43c9b7cdbf_1000x1000.jpeg",
+    role: "Front-End Web Developer Intern",
+    company: "IBM SkillsBuild (CSRBOX Collaboration)",
+    date: "June 2025 – Aug 2025",
+    desc: "Completed a 6-week virtual internship with IBM SkillsBuild, working on real-world front-end development tasks. Designed responsive web pages, built reusable UI components, and followed industry-oriented development practices. Successfully completed a front-end project as part of the final assessment.",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Flexbox",
+      "CSS Grid",
+      "GitHub",
+      "Tailwind CSS"
+    ],
+    doc: "https://substackcdn.com/image/fetch/$s_!aFzv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa27a43b7-f1ec-4586-9898-5f43c9b7cdbf_1000x1000.jpeg"
+  },  
+
+  {
     id: 5,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
-    role: "Open Source Contributor ",
+    role: "Open Source Contributor",
     company: "GirlScript Summer of Code",
-    date: "oct 2024 - Dec 2024",
-    desc: "Contributed to different open-source projects and learn from industry experts",
-},
+    date: "Oct 2024 – Dec 2024",
+    desc: "Contributed to multiple open-source projects and collaborated with mentors and contributors to improve code quality and project features.",
+    skills: [
+      "Open Source",
+      "Git",
+      "GitHub",
+      "JavaScript",
+      "Collaboration"
+    ],
+    doc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQln6Vxptcuxn3Yex9TtMhH2BDKpuEaxB-tMw&s"
+  }
 ];
+
 
 export const education = [
   {
@@ -273,167 +285,163 @@ export const education = [
 
 export const projects = [
   {
-    id: 11,
-    title: "Netifilix",
-    date: "july 2024 - Aug 2023",
-       description:"popular streaming platform. Built using the MERN stack, it allows users to browse, search, and view movie details in a responsive interface. The project integrates The Movie Database (TMDB) API to fetch real-time data on movies. Users can sign up, log in, and securely manage their accounts using JWT-based authentication. The frontend is built with React and styled using Material UI, while the backend is powered by Node.js and Express. MongoDB handles the data storage efficiently. This project demonstrates a full-stack approach to creating modern web applications.",
-    image: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKgAswMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAwUGAgQBB//EAD4QAAICAAMBDQQJAgcAAAAAAAABAgMEBRESBhMhIjE0QWFxcnOxwTM1UZIyQlOBobLR4fAUkxUjUmJ0gpH/xAAbAQEAAwEBAQEAAAAAAAAAAAAAAQMFBAIGB//EADURAAIBAwEFBgIJBQAAAAAAAAABAgMEERIFITFBYRMUUXGhwTTRIjM1REVygYKRBkJDsfD/2gAMAwEAAhEDEQA/APxsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHcqrIrWVc0l0uLOUnJpRTbfIkhklxaeGj4DuVc4LWcJRXXFoRrsmtYQnJfFRbIyidMs4wcAk3m77Gz5GfJVzgtZwlFdcWhlBwkt7RwCRU2taqqxrusbzd9jZ8jGUT2c/AjB1KucFrOEor/dFo6VNrWqqs+RjKI0SzjBGCTebvsbPkZy4TUtlwkpP6unCMoOElxRyDuVc4LWcJxXxcWjgkhprcwDqMZTekIuT+CWolCcNNuEo68m0tANLxk5B2qrWk1VY0+RqLOAHFrigCTebdNd6s07jIxkOLXFAAAgAAA2d1cbqZ1T+jOLTMxlsZV5pTCX0ozafatTVFNiaN6z7D2JcW16/elw+hnUJ4Uo9D7vbFtqnRrr+2ST8m17/AOyTdFzOrxfRjc7zOzxX5IbouZ1eL6MbneZ2eK/JE/dyn8b/AG+x6bczwlNkq7LWpxejWw36FbnWOw+Kw8IUWbUlPVrZa4NH8SLH4DF2426ddEpRlLVPVcJX21TpsddsXGa5Uy2lRp5Uk95m7S2neuM6NSGINtZw/Hxzg0WFzPBqmmt2vb2Yx02Hy/8Ah7b7q8PU7bZbMFyvTUyNHt6u/HzNHnfu23tj+ZFVWjGM4pczS2ftStWtKtSSWYLdx8Hx39CvzvHYfFYeEaLNpxlq+K10dZc1zjXhIzm9IxrTb6kjHvkZrZwlZlsoQWspUNJfF7J6r01CMY8inY95Vua1etJLVhcOmSL/ABfA/bP5JfoV08RXic9ospltR4Fro18TyvKsclr/AE7+eP6nGV+8MP3vQsjSpxTcXnccVbaN7WqUqVxDStSfBrg+rLfdFzKvxV5Mzxod0XMq/FXkzPHq2+rKP6g+Nfkiz3P8/l4b80TbpPa4fuy9CHc/z+XhvzRNuk9rh+7L0PL+IR0Q+w5/m90evIcRvuD3pvjVPT7uj+dRX25frnO8Jf5cnvn/AF6f0IslxG8Y6Kb4tnEfp+PmaXYjt7ei2tNNeoqqN0ajxzO6ypQ2nZ04z403v8ly/VY/g8Wc4j+nwUoxek7OJH1/AzBYZ3iN/wAa4xfEq4q7en+dRXnRbw0w8zE21d94u3jhHcvf1AALzJAAANhird4w07f9C1Pl1SudFi5a5qSfxWn7nGZ+7sR3GRZJfv2Agm+NXxH6fgZSj9DUj9InWi7ru8+Djleaf/fwQ7ouZ1eL6MbneZ2eK/JDdFzOrxfRjc7zOzxX5It+7mZ+N/t9jvEZxRRdOqVdrlB6NrTTzKPH3xxOLndBNRlpony8mh7Mdl2Luxt066dYylqntJep5cVgMRha4zvjFKT0WktS+jGnHDT3mRtOtf11KNSD0Rec6ceKW8ho9vV34+Zo879229sfzIzlHt6u/HzNHnfu23tj+ZEV/rIFuyPgbry9mZh8jNerFVgla1qoVbTXYjIPkZq7/dVn/Hf5SLpZ0k/09Jx7aS5Je54nn1TTW8WcK+KKvK/eGH73oeU9WV+8cP3/AELezjCEtJn9+r3dzS7Z5w1y6ot90XMq/FXkzPGozbCWYzDxrq2dpTUuM9Oh/qVEsmxq5IwfZMqt6kVDDZobbsrirdudODawuCOtz/P5eG/NE26T2uH7svQh3Pc+l4T80TbpPa4fuy9CX8QiIfYc/wA3uiqorldfXXXwSlJJP4dZsdHpprw/Eotz2H2rJ4iS4I8WPb0/zrLaOKhLGzwq+nGCl+3kVXMtUsLkaOwKMaFv2k3jtHhfpnHuZS2Eq7Jws+nGTT7TgtM/w+94qNyXFtXD2r+IqzshLVFM+UvLd29edJ8n6cvQAA9nMAAAavNGll96bS4jKbJMXDDXzjbJRrnHlfQ0Vr4Xq+FgohQUYOLfE2bnbE6t1C4hHDj1z8i5zrG4fE4eFdFm3JT1fA+TRkeV5lTgsPKuyFkpOe1xUtORdZVA9KjHRo5FEtq13c95WFLGOhfSz6r6uHsfa0jw5jmf9dVGvedjZlta7WvR2FeBGhCLykK+17yvB05y3PovkdQlsTjJfVaZ7sXm12KolTOuuMZacK114HqV4PbhFtN8jkp3NalCUISwpceoLCeb4iWHlQ41bDhsfReummnxK8CUVLiRRuKtHPZyxniCTD2ui+FsUm4PXRkYJazuK4ycJKUeKLhZ9b04eHzM6Wfvpwq/ufsUoKu70/A0ltq/X+T0XyPXleKjg8Rvk4ykthx0j936EmbY6vGyqlVGcdhNPa0PAD32cdWvmcqvKqt3bZ+izQYHMMDhsJCpWvWMdXxHwvpKinFzhj44qfLt6y7Hy/geYHmNGMc9S+vtOvVVOO5KHDHThzNRmtUcXgJ721KUOPHR68n7GXC4HquB9QFKn2axkjaN8r2oqmjS8Ye/OfQAAtM8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k=",
-    tags: [
-      "React Js",
-      "PostgressSQL",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
-    ],
-    category: "web app",
-    github: "https://github.com/gaurav-opensource/NetflixClone",
-    webapp: "https://netflixclone-b353.onrender.com/",
+    title: "AI Smart Healthcare System",
+    description:
+      "AI-powered healthcare platform with chat, video calls & ML insights.",
+    image: "/images/healthcare.png",
+    github: "https://github.com/gaurav-opensource/healthcare",
+    live: "https://healthcare-app.vercel.app",
+    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
+    details:
+      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
   },
   {
-    id: 9,
-    title: "Zoom App (Full Stack Project)",
-    date: "june 2024 - jul 2023",
-    description: "Developed a full-stack video calling app replicating Zoom’s features, including peer-to-peer video calls, real-time messaging, and screen sharing. Utilized WebRTC for video and Socket.io for chat. Implemented secure authentication and followed the MVC pattern. Enhanced user experience with dynamic room management and responsive design.",  
-    image: "data:image/jpeg;base64,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",
-     tags: [
-      "React Js",
-      "",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
-    ],
-    category: "web app",
-    github: "https://github.com/gaurav-opensource/NetflixClone",
-    webapp: "https://netflixclone-b353.onrender.com/",
+    title: "AI Smart Healthcare System",
+    description:
+      "AI-powered healthcare platform with chat, video calls & ML insights.",
+    image: "/images/healthcare.png",
+    github: "https://github.com/gaurav-opensource/healthcare",
+    live: "https://healthcare-app.vercel.app",
+    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
+    details:
+      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
   },
-]
-//   {
-//     id: 9,
-//     title: "Trackify",
-//     date: "Jun 2023 - Jul 2023",
-//     description:
-//       "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-//     tags: [
-//       "Docker",
-//       "AWS",
-//       "DuckDNS",
-//       "Eslint",
-//       "Husky",
-//       "CI/CD",
-//       "React Js",
-//       "MongoDb",
-//       "Node Js",
-//       "Express Js",
-//       "Redux",
-//     ],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/Trackify",
-//     webapp: "https://trackify-management.netlify.app/",
-//   },
-//   {
-//     id: 0,
-//     title: "Podstream",
-//     date: "Apr 2023 - May 2023",
-//     description:
-//       "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-//     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/Podstream",
-//     webapp: "https://podstream.netlify.app/",
-//     member: [
-//       {
-//         name: "Rishav Chanda",
-//         img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-//         linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-//         github: "https://github.com/rishavchanda/",
-//       },
-//       {
-//         name: "Upasana Chaudhuri",
-//         img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-//         linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-//         github: "https://github.com/upasana0710",
-//       },
-//     ],
-//   },
-//   {
-//     id: 1,
-//     title: "Vexa",
-//     date: "Oct 2022 - Jan 2023",
-//     description:
-//       "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-//     tags: [
-//       "React Js",
-//       "MongoDb",
-//       "Node Js",
-//       "Express Js",
-//       "Redux",
-//       "NodeMailer",
-//     ],
-//     category: "web app",
-//     github: "https://github.com/rishavchanda/Project-Management-App",
-//     webapp: "https://vexa-app.netlify.app/",
-//   },
-//   {
-//     id: 2,
-//     title: "Brain Tumor Detection",
-//     date: "Jan 2023 - Mar 2023",
-//     description:
-//       "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
-//     image:
-//       "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-//     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-//     category: "machine learning",
-//     github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-//     webapp: "https://brain-tumor.netlify.app/",
-//     member: [
-//       {
-//         name: "Rishav Chanda",
-//         img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-//         linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-//         github: "https://github.com/rishavchanda/",
-//       },
-//       {
-//         name: "Upasana Chaudhuri",
-//         img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-//         linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-//         github: "https://github.com/upasana0710",
-//       },
-//     ],
-//   },
-//   {
-//     id: 3,
-//     title: "Buckoid",
-//     date: "Dec 2021 - Apr 2022",
-//     description:
-//       "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
-//     image:
-//       "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-//     tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-//     category: "android app",
-//     github: "https://github.com/rishavchanda/Buckoid-Android-App",
-//     webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
-//   },
-//   {
-//     id: 10,
-//     title: "Job Finding App",
-//     date: "Jun 2023 - Jul 2023",
-//     description:
-//       "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-//     image:
-//       "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-//     tags: ["React Native", "JavaScript", "Axios"],
-//     category: "android app",
-//     github: "https://github.com/rishavchanda/Job-finder-App",
-//     webapp: "https://github.com/rishavchanda/Job-finder-App",
-//   },
+  {
+    title: "AI Smart Healthcare System",
+    description:
+      "AI-powered healthcare platform with chat, video calls & ML insights.",
+    image: "/images/healthcare.png",
+    github: "https://github.com/gaurav-opensource/healthcare",
+    live: "https://healthcare-app.vercel.app",
+    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
+    details:
+      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
+  },
+  {
+    title: "AI Smart Healthcare System",
+    description:
+      "AI-powered healthcare platform with chat, video calls & ML insights.",
+    image: "/images/healthcare.png",
+    github: "https://github.com/gaurav-opensource/healthcare",
+    live: "https://healthcare-app.vercel.app",
+    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
+    details:
+      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
+  },
+{
+  title: "AI-Powered Hiring Platform",
+  description:
+    "Full-stack recruitment system with AI resume scoring, coding tests, and automated shortlisting.",
 
-// ];
+  image:
+    "https://github.com/gaurav-opensource/Hiring-Platefrom/assets/banner-video.png",
 
+  github: "https://github.com/gaurav-opensource/Hiring-Platefrom",
+  live: "", // agar deploy ho to link daal dena
+
+  tech: [
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "FastAPI",
+    "SentenceTransformer (MiniLM-L3-v2)",
+    "Judge0 API",
+    "JWT",
+    "Docker (Optional)"
+  ],
+
+  details:
+    "A full-stack AI-powered hiring platform that automates the complete recruitment workflow. Students can apply for jobs, upload resumes, take coding tests, and track application status, while HRs can create job listings, screen resumes using AI, evaluate coding tests, and shortlist candidates. The platform integrates an AI-based Resume Scoring system and an online code execution engine for real-world hiring assessments.",
+
+  features: [
+    "Student & HR role-based dashboards",
+    "Job posting and application management",
+    "AI-powered resume screening and scoring",
+    "Automated coding test evaluation using Judge0",
+    "Candidate scoring and shortlisting dashboard",
+    "Secure authentication using JWT",
+    "Email notifications using Nodemailer"
+  ],
+
+  architecture:
+    "Microservice-based architecture with React frontend, Node.js + Express backend, MongoDB database, and a FastAPI-based AI microservice for resume scoring. External APIs like Judge0 are used for real-time code execution.",
+
+  aiSystem: {
+    name: "AI Resume Scoring Engine",
+    description:
+      "An NLP-based FastAPI service that evaluates resumes against job descriptions using semantic similarity and keyword matching.",
+    steps: [
+      "PDF resume text extraction",
+      "Text preprocessing and cleaning",
+      "Keyword matching with job description",
+      "Semantic similarity using MiniLM-L3-v2",
+      "Final weighted score generation"
+    ],
+    sampleOutput: {
+      final_score: 87.45,
+      keyword_score: 82.33,
+      semantic_score: 92.57,
+      missing_keywords: ["react", "mongodb"]
+    }
+  },
+
+  projectFlow: {
+    student:
+      "Register → Create Profile → Upload Resume → Apply for Jobs → Give Coding Test → Track Application Status",
+    hr:
+      "Register → Create Job → AI Resume Screening → Coding Test Evaluation → Shortlist Candidates"
+  },
+
+  futureImprovements: [
+    "Real-time notifications",
+    "Video interview module",
+    "Advanced resume parsing using BERT",
+    "HR analytics dashboard",
+    "Bulk email and SMS system"
+  ],
+
+  demoVideo:
+    "https://github.com/gaurav-opensource/Hiring-Platefrom"
+  },
+  {
+  title: "AI-Powered Analytics Platform",
+  description:
+    "Interactive analytics dashboard with AI-powered 'Chat with Data' using natural language → SQL.",
+  
+  image: "/images/ai-analytics.png", // apni image ka path
+  github: "https://github.com/gaurav-opensource/ai-analytics-platform",
+  live: "https://ai-analytics.vercel.app", // agar deploy hai
+
+  tech: [
+    "Next.js",
+    "Node.js",
+    "PostgreSQL",
+    "Prisma / Drizzle",
+    "Vanna AI",
+    "Groq LLM",
+    "Docker",
+    "TailwindCSS",
+    "shadcn/ui"
+  ],
+
+  details:
+    "A production-grade AI-powered analytics platform featuring an interactive finance dashboard and natural language 'Chat with Data'. Users can ask business questions in plain English, which are converted into SQL using Vanna AI and Groq LLM, executed on PostgreSQL, and visualized as tables and charts. The platform provides insights into invoices, vendor spend, categories, trends, and cash flow forecasts. Built with a Docker-based full-stack setup including frontend, backend, AI service, and database.",
+
+  features: [
+    "Interactive finance dashboard with real-time metrics",
+    "Natural Language → SQL → Results using AI",
+    "Invoice trends, vendor spend, category analysis",
+    "Cash outflow forecasting",
+    "SQL query transparency in UI",
+    "Docker-based full local development environment"
+  ],
+
+  architecture:
+    "Monorepo architecture with Next.js frontend, Node.js backend, Python-based Vanna AI service, PostgreSQL database, and Docker orchestration.",
+
+  demoVideo: "https://youtube.com/your-demo-link"
+  },
+
+];

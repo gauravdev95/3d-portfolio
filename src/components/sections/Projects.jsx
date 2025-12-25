@@ -7,44 +7,33 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 60px;
   padding: 0 16px;
-  position: relative;
-  z-index: 1;
 `;
 
 const Title = styled.h2`
   font-size: 52px;
-  text-align: center;
   font-weight: 600;
-  margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
 
   @media (max-width: 768px) {
     font-size: 32px;
-    margin-top: 12px;
   }
 `;
 
 const Desc = styled.p`
   font-size: 18px;
   text-align: center;
-  font-weight: 500;
+  max-width: 700px;
   color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 40px;
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
+  margin: 20px 0 40px;
 `;
 
 const CardContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 28px;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
   max-width: 1100px;
 `;
 
@@ -53,8 +42,8 @@ const Projects = () => {
     <Container id="Projects">
       <Title>Projects</Title>
       <Desc>
-        Here are some of my projects. You can add more projects in the
-        <code>projects</code> array in your constants file.
+        A collection of real-world projects showcasing Full Stack development,
+        system design thinking, and AI integration.
       </Desc>
 
       <CardContainer>
