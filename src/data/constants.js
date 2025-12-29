@@ -1,4 +1,4 @@
-import UMNP from "../images/UMNP.png";
+
 
 export const Bio = {
   name: "Gaurav Yadav",

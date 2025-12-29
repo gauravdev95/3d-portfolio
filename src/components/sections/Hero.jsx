@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/HeroImage.jpg";
+import HeroImg from "../../images/HeroImage.jpeg";
 import HeroBgAnimation from "../HeroBgAnimation"; // subtle SVG animation
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
@@ -153,15 +153,21 @@ const ResumeButton = styled.a`
 `;
 
 const Img = styled.img`
-  border-radius: 50%;
-  width: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  width: 380px;
+  height: 520px;               /* 🔥 vertical height */
+  object-fit: cover;
+
+  border-radius: 50% / 40%;    /* 🔥 oval shape */
   border: 2px solid ${({ theme }) => theme.primary};
 
+  @media (max-width: 960px) {
+    width: 300px;
+    height: 420px;
+  }
+
   @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
+    width: 260px;
+    height: 360px;
   }
 `;
 

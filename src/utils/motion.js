@@ -50,8 +50,8 @@ export const headTextAnimation = {
 };
 
 export const headContentAnimation = {
-  initial: { y: 100, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
+  initial: { y: 100, opacity: 0.8 },
+  animate: { y: 0, opacity: 1.1 },
   transition: {
     type: "spring",
     damping: 7,
