@@ -1,7 +1,8 @@
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import Experience from "./components/sections/Experience";
@@ -13,6 +14,8 @@ import Footer from "./components/sections/Footer";
 import Achievement from "./components/sections/Achievement";
 import TheorySubjects from "./components/sections/TheorySubjects";
 
+import Resumepdf from "./components/ResumeBuilder/PdfDownload";
+import ResumeEditor from "./components/ResumeBuilder/ResumeEditor";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -37,29 +40,46 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
+/* ===== PORTFOLIO PAGE ===== */
+const PortfolioPage = () => (
+  <>
+    <Navbar />
+    <Body>
+      <StartCanvas />
+      <div>
+        <Hero />
+        <Wrapper>
+          <Skills />
+          <TheorySubjects />
+          <Achievement />
+          <Experience />
+        </Wrapper>
+
+        <Projects />
+
+        <Wrapper>
+          <Education />
+          <Contact />
+        </Wrapper>
+
+        <Resumepdf />
+        <Footer />
+      </div>
+    </Body>
+  </>
+);
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
-        <Navbar />
-        <Body>
-          <StartCanvas />
-          <div>
-            <Hero />
-            <Wrapper>
-              <Skills />
-              <TheorySubjects/>
-              <Achievement/>
-              <Experience />
-            </Wrapper>
-            <Projects />
-            <Wrapper>
-              <Education />
-              <Contact />
-            </Wrapper>
-            <Footer />
-          </div>
-        </Body>
+        <Routes>
+          {/* Home / Portfolio */}
+          <Route path="/" element={<PortfolioPage />} />
+
+          {/* Resume Editor */}
+          <Route path="/editor" element={<ResumeEditor />} />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   );
