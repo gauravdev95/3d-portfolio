@@ -4,80 +4,63 @@ import PdfDownload from "./PdfDownload";
 import resumeData from "./resumeData";
 
 const ResumeEditor = () => {
-  // local editable state
   const [data, setData] = useState(resumeData);
 
-  // ===== BASIC HANDLERS =====
-  const handleChange = (section, field, value) => {
-    setData((prev) => ({
+  /* ===== BASIC HELPERS ===== */
+  const updateRoot = (key, value) => {
+    setData(prev => ({ ...prev, [key]: value }));
+  };
+
+  const updateContact = (key, value) => {
+    setData(prev => ({
       ...prev,
-      [section]: {
-        ...prev[section],
-        [field]: value,
-      },
+      contact: { ...prev.contact, [key]: value },
     }));
   };
 
-  const handleObjectiveChange = (value) => {
-    setData((prev) => ({ ...prev, objective: value }));
-  };
-
-  const handleSkillChange = (category, index, value) => {
-    const updated = [...data.skills[category]];
-    updated[index] = value;
-
-    setData((prev) => ({
+  const updateSkill = (category, valueArray) => {
+    setData(prev => ({
       ...prev,
-      skills: {
-        ...prev.skills,
-        [category]: updated,
-      },
+      skills: { ...prev.skills, [category]: valueArray },
     }));
   };
 
-  const addSkill = (category) => {
-    setData((prev) => ({
-      ...prev,
-      skills: {
-        ...prev.skills,
-        [category]: [...prev.skills[category], ""],
-      },
-    }));
+  const updateArrayField = (section, index, field, value) => {
+    const updated = [...data[section]];
+    updated[index] = { ...updated[index], [field]: value };
+    setData(prev => ({ ...prev, [section]: updated }));
   };
 
-  const removeSkill = (category, index) => {
-    const updated = data.skills[category].filter((_, i) => i !== index);
-    setData((prev) => ({
-      ...prev,
-      skills: {
-        ...prev.skills,
-        [category]: updated,
-      },
-    }));
+  const updateArrayPoint = (section, index, pIndex, value) => {
+    const updated = [...data[section]];
+    const points = [...updated[index].points];
+    points[pIndex] = value;
+    updated[index].points = points;
+    setData(prev => ({ ...prev, [section]: updated }));
   };
 
-  // ====== RENDER ======
+  /* ===== UI ===== */
   return (
     <>
       <style>{`
         .editor-page {
           display: grid;
-          grid-template-columns: 1fr 1.2fr;
+          grid-template-columns: 1fr 1.3fr;
           gap: 16px;
           padding: 16px;
-          background: #f5f5f5;
+          background: #f4f4f4;
         }
 
         .editor {
           background: #fff;
-          padding: 14px;
+          padding: 16px;
           border-radius: 6px;
-          overflow-y: auto;
           max-height: 85vh;
+          overflow-y: auto;
         }
 
         .editor h3 {
-          margin-top: 12px;
+          margin: 16px 0 6px;
           font-size: 14px;
         }
 
@@ -89,16 +72,21 @@ const ResumeEditor = () => {
           margin-bottom: 6px;
         }
 
-        .editor button {
-          font-size: 12px;
-          margin-right: 6px;
+        .editor small {
+          color: #666;
+        }
+
+        .section-box {
+          margin-bottom: 14px;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 10px;
         }
 
         .preview {
           background: #ccc;
           padding: 10px;
-          overflow: auto;
           max-height: 85vh;
+          overflow: auto;
         }
 
         .download {
@@ -107,70 +95,135 @@ const ResumeEditor = () => {
         }
       `}</style>
 
-      {/* ===== MAIN LAYOUT ===== */}
       <div className="editor-page">
-        {/* LEFT SIDE – EDITOR */}
+        {/* LEFT – EDITOR */}
         <div className="editor">
-          <h3>Basic Info</h3>
-          <input
-            value={data.name}
-            onChange={(e) => setData({ ...data, name: e.target.value })}
-            placeholder="Name"
-          />
-          <input
-            value={data.contact.phone}
-            onChange={(e) =>
-              handleChange("contact", "phone", e.target.value)
-            }
-            placeholder="Phone"
-          />
-          <input
-            value={data.contact.email}
-            onChange={(e) =>
-              handleChange("contact", "email", e.target.value)
-            }
-            placeholder="Email"
-          />
 
-          <h3>Career Objective</h3>
-          <textarea
-            rows={4}
-            value={data.objective}
-            onChange={(e) => handleObjectiveChange(e.target.value)}
-          />
+          {/* BASIC INFO */}
+          <div className="section-box">
+            <h3>Basic Info</h3>
+            <input value={data.name} onChange={e => updateRoot("name", e.target.value)} />
+            {Object.keys(data.contact).map(key => (
+              <input
+                key={key}
+                placeholder={key}
+                value={data.contact[key]}
+                onChange={e => updateContact(key, e.target.value)}
+              />
+            ))}
+          </div>
 
-          <h3>Skills</h3>
-          {Object.keys(data.skills).map((category) => (
-            <div key={category}>
-              <b>{category}</b>
-              {data.skills[category].map((skill, i) => (
-                <div key={i}>
+          {/* OBJECTIVE */}
+          <div className="section-box">
+            <h3>Career Objective</h3>
+            <textarea
+              rows={4}
+              value={data.objective}
+              onChange={e => updateRoot("objective", e.target.value)}
+            />
+          </div>
+
+          {/* SKILLS */}
+          <div className="section-box">
+            <h3>Skills (comma separated)</h3>
+            {Object.keys(data.skills).map(cat => (
+              <div key={cat}>
+                <b>{cat}</b>
+                <input
+                  value={data.skills[cat].join(", ")}
+                  onChange={e =>
+                    updateSkill(
+                      cat,
+                      e.target.value.split(",").map(s => s.trim())
+                    )
+                  }
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* EXPERIENCE */}
+          <div className="section-box">
+            <h3>Experience</h3>
+            {data.experience.map((e, i) => (
+              <div key={i}>
+                <input value={e.role} onChange={ev => updateArrayField("experience", i, "role", ev.target.value)} />
+                <input value={e.company} onChange={ev => updateArrayField("experience", i, "company", ev.target.value)} />
+                <input value={e.duration} onChange={ev => updateArrayField("experience", i, "duration", ev.target.value)} />
+                {e.points.map((p, j) => (
                   <input
-                    value={skill}
-                    onChange={(e) =>
-                      handleSkillChange(category, i, e.target.value)
-                    }
+                    key={j}
+                    value={p}
+                    onChange={ev => updateArrayPoint("experience", i, j, ev.target.value)}
                   />
-                  <button onClick={() => removeSkill(category, i)}>
-                    ❌
-                  </button>
-                </div>
-              ))}
-              <button onClick={() => addSkill(category)}>
-                ➕ Add Skill
-              </button>
-            </div>
-          ))}
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* PROJECTS */}
+          <div className="section-box">
+            <h3>Projects</h3>
+            {data.projects.map((p, i) => (
+              <div key={i}>
+                <input value={p.title} onChange={e => updateArrayField("projects", i, "title", e.target.value)} />
+                <input value={p.tech} onChange={e => updateArrayField("projects", i, "tech", e.target.value)} />
+                <input value={p.duration} onChange={e => updateArrayField("projects", i, "duration", e.target.value)} />
+                <input value={p.github} onChange={e => updateArrayField("projects", i, "github", e.target.value)} />
+                {p.points.map((pt, j) => (
+                  <input
+                    key={j}
+                    value={pt}
+                    onChange={e => updateArrayPoint("projects", i, j, e.target.value)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* EDUCATION */}
+          <div className="section-box">
+            <h3>Education</h3>
+            {data.education.map((ed, i) => (
+              <div key={i}>
+                <input value={ed.degree} onChange={e => updateArrayField("education", i, "degree", e.target.value)} />
+                <input value={ed.institute} onChange={e => updateArrayField("education", i, "institute", e.target.value)} />
+                <input value={ed.duration} onChange={e => updateArrayField("education", i, "duration", e.target.value)} />
+                <input value={ed.score} onChange={e => updateArrayField("education", i, "score", e.target.value)} />
+              </div>
+            ))}
+          </div>
+
+          {/* ACHIEVEMENTS */}
+          <div className="section-box">
+            <h3>Achievements</h3>
+            {data.achievements.map((a, i) => (
+              <div key={i}>
+                <input value={a.title} onChange={e => updateArrayField("achievements", i, "title", e.target.value)} />
+                <input value={a.desc} onChange={e => updateArrayField("achievements", i, "desc", e.target.value)} />
+              </div>
+            ))}
+          </div>
+
+          {/* CERTIFICATIONS */}
+          <div className="section-box">
+            <h3>Certifications</h3>
+            {data.certifications.map((c, i) => (
+              <div key={i}>
+                <input value={c.title} onChange={e => updateArrayField("certifications", i, "title", e.target.value)} />
+                <input value={c.desc} onChange={e => updateArrayField("certifications", i, "desc", e.target.value)} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* RIGHT SIDE – PREVIEW */}
+        {/* RIGHT – LIVE PREVIEW */}
         <div className="preview">
-          {/* IMPORTANT: pass edited data */}
           <ResumePage resumeData={data} />
         </div>
       </div>
 
-      {/* DOWNLOAD BUTTON */}
+      {/* DOWNLOAD */}
       <div className="download">
         <PdfDownload />
       </div>

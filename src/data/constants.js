@@ -11,7 +11,7 @@ export const Bio = {
   description:
     "I am a motivated Full Stack Developer with a strong interest in Artificial Intelligence and Machine Learning integration. I enjoy building scalable web applications and enhancing them with intelligent features such as automation, data-driven decision systems, and real-time communication. With a growth mindset and passion for continuous learning, I strive to deliver impactful, production-ready solutions.",
   github: "https://github.com/gaurav-opensource",
-  resume: "https://drive.google.com/file/d/1Prd2qy01yi5PsjfZwlAG2PU7hBq72zvq/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1y-iJc-eX-gQPJnhKGROUlTGDUlRIqtVz/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
   twitter: "https://twitter.com/@gaurav9536webde",
   facebook: "https://www.facebook.com/rishav.chanda.165/",

@@ -1,6 +1,10 @@
 import resumeData from "./resumeData";
 
-const ResumePage = () => {
+
+
+
+
+const ResumePage = ({ resumeData }) => {
   const r = resumeData;
 
   return (
@@ -24,37 +28,41 @@ const ResumePage = () => {
         /* HEADER */
         .resume-name {
           text-align: center;
-          font-size: 20px;
+          font-size: 22px;
           font-weight: 700;
+          letter-spacing: 0.5px;
         }
 
         .resume-header {
           text-align: center;
           font-size: 12px;
-          margin-top: 2px;
+          margin-top: 4px;
         }
 
         .resume-header a {
           color: #0000ee;
           text-decoration: underline;
+          font-weight: 600;
         }
 
         .resume-location {
           text-align: center;
-          font-size: 12px;
-          margin-bottom: 6px;
+          font-size: 11.5px;
+          color: #444;
+          margin-bottom: 8px;
         }
 
         /* SECTION TITLE */
         .section-title {
-          margin-top: 10px;
+          margin-top: 12px;
           font-size: 13px;
           font-weight: 700;
-          color: #6a1b9a;
+          color: #4a148c;
           text-transform: uppercase;
-          border-bottom: 1.2px solid #6a1b9a;
-          padding-bottom: 1px;
-          margin-bottom: 4px;
+          border-bottom: 1.2px solid #4a148c;
+          padding-bottom: 2px;
+          margin-bottom: 6px;
+          letter-spacing: 0.3px;
         }
 
         /* TEXT */
@@ -65,16 +73,17 @@ const ResumePage = () => {
         /* SKILLS */
         .skill-line {
           font-size: 12.5px;
+          margin-bottom: 3px;
         }
 
         /* BLOCKS */
         .block {
-          margin-bottom: 6px;
+          margin-bottom: 8px;
         }
 
         .block-title {
           font-weight: 700;
-          font-size: 12.5px;
+          font-size: 12.7px;
         }
 
         /* LISTS */
@@ -84,7 +93,8 @@ const ResumePage = () => {
         }
 
         li {
-          margin-bottom: 2px;
+          margin-bottom: 3px;
+          text-align: justify;
         }
 
         /* EDUCATION */
@@ -94,11 +104,21 @@ const ResumePage = () => {
           font-size: 12.5px;
         }
 
+        .edu-row span:last-child {
+          font-weight: 600;
+          white-space: nowrap;
+        }
+
         /* LINKS */
-        .github {
-          color: #0000ee;
-          font-size: 12px;
+        .github a {
+          color: #0d47a1;
+          font-weight: 600;
+          text-decoration: none;
           margin-left: 4px;
+        }
+
+        .github a:hover {
+          text-decoration: underline;
         }
 
         /* PREVENT PAGE BREAK */
@@ -123,11 +143,11 @@ const ResumePage = () => {
         <div className="resume-header">
           {r.contact.phone} | {r.contact.email}
           <br />
-          <a href={`https://${r.contact.linkedin}`}>
+          <a href={`https://${r.contact.linkedin}`} target="_blank" rel="noreferrer">
             {r.contact.linkedin}
-          </a>{" "}
-          |{" "}
-          <a href={`https://${r.contact.github}`}>
+          </a>
+          {" | "}
+          <a href={`https://${r.contact.github}`} target="_blank" rel="noreferrer">
             {r.contact.github}
           </a>
         </div>
@@ -142,7 +162,7 @@ const ResumePage = () => {
         <div className="section-title">Skills</div>
         {Object.entries(r.skills).map(([k, v]) => (
           <p key={k} className="skill-line">
-            <b>{k}:</b> {v.join(", ")}
+            <b>{k}</b>: {v.join(", ")}
           </p>
         ))}
 
@@ -167,7 +187,11 @@ const ResumePage = () => {
           <div key={i} className="block">
             <p className="block-title">
               {i + 1}. {p.title} | {p.tech} — {p.duration}
-              <span className="github"> {p.github}</span>
+              <span className="github">
+                <a href={p.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              </span>
             </p>
             <ul>
               {p.points.map((pt, j) => (
@@ -182,7 +206,9 @@ const ResumePage = () => {
         {r.education.map((e, i) => (
           <div key={i} className="edu-row">
             <span>
-              <b>{e.degree}</b>, {e.institute}
+              <b>{e.degree}</b>
+              <br />
+              {e.institute}
             </span>
             <span>
               {e.duration} | {e.score}
@@ -194,7 +220,9 @@ const ResumePage = () => {
         <div className="section-title">Achievements</div>
         <ul>
           {r.achievements.map((a, i) => (
-            <li key={i}>{a}</li>
+            <li key={i}>
+              <b>{a.title}:</b> {a.desc}
+            </li>
           ))}
         </ul>
 
@@ -202,7 +230,9 @@ const ResumePage = () => {
         <div className="section-title">Certifications</div>
         <ul>
           {r.certifications.map((c, i) => (
-            <li key={i}>{c}</li>
+            <li key={i}>
+              <b>{c.title}:</b> {c.desc}
+            </li>
           ))}
         </ul>
       </div>

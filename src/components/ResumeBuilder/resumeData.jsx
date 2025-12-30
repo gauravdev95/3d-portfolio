@@ -41,7 +41,7 @@ const resumeData = {
       title: "Smart Healthcare System",
       tech: "MERN Stack + WebRTC",
       duration: "Feb 2025 – June 2025",
-      github: "Github Link",
+      github: "https://github.com/gaurav-opensource/Smart-Digital-Healthcare-System",
       points: [
         "Built a full-stack healthcare platform with role-based access for Admin, Doctor, and Users.",
         "Integrated real-time video calls, chat, and secure payments for virtual consultations.",
@@ -50,10 +50,10 @@ const resumeData = {
       ],
     },
     {
-      title: "Placements Hiring Portal",
-      tech: "MERN Stack + Judge0 API + Machine Learning",
+      title: "Smart Recruitment Systeml",
+      tech: "MERN Stack + Judge0 API + ML",
       duration: "July 2025 – Oct 2025",
-      github: "Github Link",
+      github: "https://github.com/gaurav-opensource/Smart-Recruitment-System",
       points: [
         "Developed a full-stack hiring platform to automate recruitment and improve HR–student interaction.",
         "Built a job portal with ML-based resume scoring and automated coding assessments using Judge0 API.",
@@ -66,9 +66,9 @@ const resumeData = {
   education: [
     {
       degree: "B.Tech in Computer Science and Engineering",
-      institute: "AKTU (Dr. A.P.J. Abdul Kalam Technical University)",
+      institute: "Hindustan college of science and technology",
       duration: "July 2023 – Aug 2027",
-      score: "CGPA: 8.0 / 10",
+      score: "CGPA: 7.61 / 10",
     },
     {
       degree: "XII (Senior Secondary, PCM)",
@@ -78,15 +78,28 @@ const resumeData = {
     },
   ],
 
-  achievements: [
-    "Smart India Hackathon: Developed a centralized hiring system to streamline and automate the entire hiring workflow.",
-    "ByteClub (In-College Program): Secured 6th rank among 1000+ students in DSA test; completed intensive training program.",
-  ],
+achievements: [
+  {
+    title: "Smart India Hackathon",
+    desc: "Developed a centralized hiring system to streamline and automate the entire hiring workflow."
+  },
+  {
+    title: "ByteClub (In-College Program)",
+    desc: "Secured 6th rank among 1000+ students in DSA test; completed intensive training program."
+  }
+],
 
-  certifications: [
-    "Apna College – Full-Stack Development (MERN Stack), built full-stack applications and APIs.",
-    "GeeksforGeeks – Data Science Program (Python, Machine Learning, Data Analysis, Visualization).",
-  ],
+certifications: [
+  {
+    title: "Apna College",
+    desc: "Full-Stack Development (MERN Stack), built full-stack applications and APIs."
+  },
+  {
+    title: "GeeksforGeeks",
+    desc: "Data Science Program (Python, Machine Learning, Data Analysis, Visualization)."
+  }
+]
+
 };
 
 export default resumeData;
