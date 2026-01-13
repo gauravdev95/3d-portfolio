@@ -4,7 +4,8 @@ import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
 
-/* ================= NAV WRAPPER ================= */
+
+// ================= NAVBAR =================
 
 const Nav = styled.div`
   background: ${({ theme }) => theme.bg};
@@ -174,8 +175,8 @@ const MobileMenu = styled.ul`
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 `;
 
-/* ================= COMPONENT ================= */
 
+// Navbar component to display navigation bar with links and responsive menu
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();

@@ -16,6 +16,8 @@ import TheorySubjects from "./components/sections/TheorySubjects";
 
 import Resumepdf from "./components/ResumeBuilder/PdfDownload";
 import ResumeEditor from "./components/ResumeBuilder/ResumeEditor";
+import ResumePage from "./components/ResumeBuilder/ResumePage";
+import resumeData from "./components/ResumeBuilder/resumeData.jsx";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -78,7 +80,10 @@ function App() {
           <Route path="/" element={<PortfolioPage />} />
 
           {/* Resume Editor */}
-          <Route path="/editor" element={<ResumeEditor />} />
+         <Route
+  path="/editor"
+  element={<ResumePage resumeData={resumeData} />}
+/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

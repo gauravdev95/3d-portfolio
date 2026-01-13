@@ -79,6 +79,8 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
+
+// Footer component to display site footer with navigation and social links
 const Footer = () => {
   return (
     <FooterContainer>

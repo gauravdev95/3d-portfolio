@@ -2,6 +2,7 @@ import React from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import styled from "styled-components";
 
+// Styled components for the EducationCard
 const Top = styled.div`
   width: 100%;
   display: flex;
@@ -71,6 +72,7 @@ const Span = styled.div`
   max-width: 100%;
 `;
 
+// EducationCard component to display individual education entries
 const EducationCard = ({ education }) => {
   return (
     <VerticalTimelineElement
@@ -117,5 +119,6 @@ const EducationCard = ({ education }) => {
     </VerticalTimelineElement>
   );
 };
+
 
 export default EducationCard;

@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
+// Earth component to load and display the 3D model
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
   return (
@@ -9,6 +10,7 @@ const Earth = () => {
   );
 };
 
+// EarthCanvas component to set up the 3D canvas environment
 const EarthCanvas = () => {
   return (
     <Canvas

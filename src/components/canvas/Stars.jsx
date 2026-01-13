@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+// Styled component for the stars canvas background
 const StyledCanvasWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -14,6 +15,7 @@ const StyledCanvasWrapper = styled.div`
   z-index: -1; // Keep behind content
 `;
 
+// StarsCanvas component to render the styled background
 const StyledStarsCanvas = () => {
   return <StyledCanvasWrapper />;
 };

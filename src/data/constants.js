@@ -283,165 +283,80 @@ export const education = [
   },
 ];
 
+
 export const projects = [
+  //Helthcare System
   {
     title: "AI Smart Healthcare System",
     description:
       "AI-powered healthcare platform with chat, video calls & ML insights.",
-    image: "/images/healthcare.png",
+    image: "/assets/digital.jpg",
     github: "https://github.com/gaurav-opensource/healthcare",
     live: "https://healthcare-app.vercel.app",
     tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
     details:
       "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
   },
+  //Hiring Platform
   {
-    title: "AI Smart Healthcare System",
-    description:
-      "AI-powered healthcare platform with chat, video calls & ML insights.",
-    image: "/images/healthcare.png",
-    github: "https://github.com/gaurav-opensource/healthcare",
-    live: "https://healthcare-app.vercel.app",
-    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
-    details:
-      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
-  },
-  {
-    title: "AI Smart Healthcare System",
-    description:
-      "AI-powered healthcare platform with chat, video calls & ML insights.",
-    image: "/images/healthcare.png",
-    github: "https://github.com/gaurav-opensource/healthcare",
-    live: "https://healthcare-app.vercel.app",
-    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
-    details:
-      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
-  },
-  {
-    title: "AI Smart Healthcare System",
-    description:
-      "AI-powered healthcare platform with chat, video calls & ML insights.",
-    image: "/images/healthcare.png",
-    github: "https://github.com/gaurav-opensource/healthcare",
-    live: "https://healthcare-app.vercel.app",
-    tech: ["MERN", "Socket.IO", "WebRTC", "ML"],
-    details:
-      "A complete healthcare system with doctor verification, appointment booking, real-time chat, video consultation, report uploads, and AI-based health analysis.",
-  },
-{
-  title: "AI-Powered Hiring Platform",
-  description:
-    "Full-stack recruitment system with AI resume scoring, coding tests, and automated shortlisting.",
-
-  image:
-    "https://github.com/gaurav-opensource/Hiring-Platefrom/assets/banner-video.png",
-
-  github: "https://github.com/gaurav-opensource/Hiring-Platefrom",
-  live: "", // agar deploy ho to link daal dena
-
-  tech: [
-    "React",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "FastAPI",
-    "SentenceTransformer (MiniLM-L3-v2)",
-    "Judge0 API",
-    "JWT",
-    "Docker (Optional)"
-  ],
-
-  details:
-    "A full-stack AI-powered hiring platform that automates the complete recruitment workflow. Students can apply for jobs, upload resumes, take coding tests, and track application status, while HRs can create job listings, screen resumes using AI, evaluate coding tests, and shortlist candidates. The platform integrates an AI-based Resume Scoring system and an online code execution engine for real-world hiring assessments.",
-
-  features: [
-    "Student & HR role-based dashboards",
-    "Job posting and application management",
-    "AI-powered resume screening and scoring",
-    "Automated coding test evaluation using Judge0",
-    "Candidate scoring and shortlisting dashboard",
-    "Secure authentication using JWT",
-    "Email notifications using Nodemailer"
-  ],
-
-  architecture:
-    "Microservice-based architecture with React frontend, Node.js + Express backend, MongoDB database, and a FastAPI-based AI microservice for resume scoring. External APIs like Judge0 are used for real-time code execution.",
-
-  aiSystem: {
-    name: "AI Resume Scoring Engine",
-    description:
-      "An NLP-based FastAPI service that evaluates resumes against job descriptions using semantic similarity and keyword matching.",
-    steps: [
-      "PDF resume text extraction",
-      "Text preprocessing and cleaning",
-      "Keyword matching with job description",
-      "Semantic similarity using MiniLM-L3-v2",
-      "Final weighted score generation"
+    title: "Smart Recruit System",
+    description:"Full-stack AI-powered hiring platform with resume scoring, coding tests, and automated candidate shortlisting.",
+    image: "/assets/HR.jpg",
+    github: "https://github.com/gaurav-opensource/Hiring-Platefrom",
+    live: "",
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "FastAPI",
+      "SentenceTransformer",
+      "Judge0 API",
     ],
-    sampleOutput: {
-      final_score: 87.45,
-      keyword_score: 82.33,
-      semantic_score: 92.57,
-      missing_keywords: ["react", "mongodb"]
-    }
+    details:
+      "A complete recruitment system enabling HR to post jobs, auto-screen resumes using AI, evaluate coding tests, and shortlist candidates. Includes student dashboard, HR dashboard, AI microservice, and real-time code execution.",
   },
-
-  projectFlow: {
-    student:
-      "Register → Create Profile → Upload Resume → Apply for Jobs → Give Coding Test → Track Application Status",
-    hr:
-      "Register → Create Job → AI Resume Screening → Coding Test Evaluation → Shortlist Candidates"
-  },
-
-  futureImprovements: [
-    "Real-time notifications",
-    "Video interview module",
-    "Advanced resume parsing using BERT",
-    "HR analytics dashboard",
-    "Bulk email and SMS system"
-  ],
-
-  demoVideo:
-    "https://github.com/gaurav-opensource/Hiring-Platefrom"
-  },
+  //Analytics Platform
   {
-  title: "AI-Powered Analytics Platform",
-  description:
-    "Interactive analytics dashboard with AI-powered 'Chat with Data' using natural language → SQL.",
-  
-  image: "/images/ai-analytics.png", // apni image ka path
-  github: "https://github.com/gaurav-opensource/ai-analytics-platform",
-  live: "https://ai-analytics.vercel.app", // agar deploy hai
-
-  tech: [
-    "Next.js",
-    "Node.js",
-    "PostgreSQL",
-    "Prisma / Drizzle",
-    "Vanna AI",
-    "Groq LLM",
-    "Docker",
-    "TailwindCSS",
-    "shadcn/ui"
-  ],
-
-  details:
-    "A production-grade AI-powered analytics platform featuring an interactive finance dashboard and natural language 'Chat with Data'. Users can ask business questions in plain English, which are converted into SQL using Vanna AI and Groq LLM, executed on PostgreSQL, and visualized as tables and charts. The platform provides insights into invoices, vendor spend, categories, trends, and cash flow forecasts. Built with a Docker-based full-stack setup including frontend, backend, AI service, and database.",
-
-  features: [
-    "Interactive finance dashboard with real-time metrics",
-    "Natural Language → SQL → Results using AI",
-    "Invoice trends, vendor spend, category analysis",
-    "Cash outflow forecasting",
-    "SQL query transparency in UI",
-    "Docker-based full local development environment"
-  ],
-
-  architecture:
-    "Monorepo architecture with Next.js frontend, Node.js backend, Python-based Vanna AI service, PostgreSQL database, and Docker orchestration.",
-
-  demoVideo: "https://youtube.com/your-demo-link"
+    title: "AI-Powered Analytics Platform",
+    description:
+      "Interactive finance dashboard with AI-powered natural language analytics using Vanna + Groq, Docker-based full-stack setup.",
+    image: "/assets/digitalAn.jpg",
+    github: "https://github.com/gaurav-opensource/AI-Powered-Data-Analytics-Platform",
+    live: "",
+    tech: [
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma / Drizzle",
+      "Docker",
+      "Python",
+      "Vanna AI",
+      "Groq LLM",
+      "TailwindCSS",
+    ],
+    details:
+      "An enterprise-grade analytics platform with an interactive dashboard showing spend, invoices, vendor insights, cashflow forecasts, and trends. Includes a complete 'Chat with Data' feature that converts natural language into SQL using Vanna + Groq, executes queries on PostgreSQL, and visualizes results. Fully containerized using Docker with services for frontend, backend, Vanna AI, and Postgres.",
   },
-
+  //Trading Platform
+  {
+    title: "Trading Platform",
+    description:
+      "Real-time MERN-based trading system for stock search, portfolio management, and buy/sell execution with JWT authentication.",
+    image: "/assets/Trading.jpg",
+    github: "https://github.com/gaurav-opensource/Trading-Platfrom",
+    live: "",
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Material UI",
+      "Axios"
+    ],
+    details:
+      "A user-friendly stock trading platform featuring secure JWT authentication, real-time stock data, buy/sell execution, portfolio tracking, alerts, and analytics dashboards. Built with the MERN stack and Material UI, it includes live price updates, ROI insights, and a complete trading workflow with backend APIs for trades, portfolio, and authentication.",
+  },
 ];

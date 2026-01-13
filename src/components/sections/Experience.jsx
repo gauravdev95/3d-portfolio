@@ -49,6 +49,8 @@ const Desc = styled.div`
   }
 `;
 
+
+// Education section component to display educational background
 const Experience = () => {
   return (
     <Container id="Experience">

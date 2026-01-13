@@ -1,64 +1,90 @@
 const resumeData = {
   name: "Gaurav Yadav",
+
+  role: "Software Engineer Intern",
+
   contact: {
     phone: "+91 95361 10219",
-    email: "gauravyadav@gmail.com",
-    linkedin: "linkedin.com/in/gauravyadav95",
+    email: "gauravyadavgh@gmail.com",
+    linkedin: "linkedin.com/in/gaurav-opensource",
     github: "github.com/gaurav-opensource",
-    location: "Agra, Uttar Pradesh – 283201, India",
+    location: "Agra, Uttar Pradesh, India",
   },
 
-  objective:
-    "Motivated B.Tech CSE student with hands-on experience in MERN stack, Python, C++, and AI-based application development. Built real-time healthcare and hiring platforms using WebRTC, REST APIs, ML-based features, and secure backend systems. Seeking a software engineering internship to apply my skills in full-stack development, AI integration, problem-solving, and scalable application design.",
+  summary:
+    "Software engineer   experience in full-stack web development and applied machine learning. B.Tech graduate  with strong expertise in Python, React, SQL, MongoDB, and ML libraries including Pandas, NumPy, and Scikit-learn. Proven ability to build CI/CD pipelines, optimize backend systems, and deliver high-accuracy models.",
 
   skills: {
-    Languages: ["Python", "C++", "JavaScript"],
-    "Web Technologies": ["HTML", "CSS", "React.js", "Node.js", "Express.js"],
-    Databases: ["MongoDB", "MySQL"],
-    "AI and Machine Learning": [
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "Scikit-learn",
-    ],
-    Tools: ["GitHub", "VS Code", "Postman", "Docker", "Render"],
+    "Programming Languages": ["Python", "C++"],
+    "Frontend & Frameworks": ["ReactJS", "Node.js", "Express.js","CSS", "Flask", "FastAPI"],
+    "Databases & Platforms": ["MongoDB", "SQL", "PyCharm", "VS Code", "IntelliJ IDEA"],
+    "Platforms & Libraries": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+    Others: ["Rapport building", "Stakeholder management", "Communication Skills"],
   },
 
   experience: [
     {
-      role: "Front-End Web Developer Intern",
+      role: "FullStack Intern Trainee",
       company: "IBM SkillsBuild",
-      duration: "Jun–Aug 2025",
+      location: "Hyderabad",
+      duration: "June 2025 – Aug 2025",
+      technologies: "Node.js, React, Tailwind CSS, SQL, MongoDB, CI/CD",
       points: [
-        "Worked on responsive UI development using HTML, CSS, JavaScript, and React.",
-        "Built layouts using Flexbox/Grid and developed clean, reusable UI components.",
+        "Built and maintained web server components and APIs.",
+        "Managed CI/CD pipelines reducing manual effort by 20 hours/week.",
+        "Fixed 15 major bugs improving quality and reducing defects.",
+        "Optimized endpoints improving latency by 66%.",
+        "Enabled horizontal scaling achieving 99.97% uptime.",
       ],
+    },
+    {
+      role: "Backend Developer Intern Trainee",
+      company: "CodSoft Technologies",
+      location: "Remote",
+      duration: "Dec 2025 – Jun 2026",
+      technologies: "Node.js,Express, Flask, PostgreSQL, MongoDB, REST APIs",
+      points: [
+        "Developed RESTful APIs using Node.js and Express.js with scalable modular architecture.",
+        "Designed MongoDB schemas using Mongoose and optimized database queries for better performance.",
+        "Implemented JWT-based authentication and secure route access using middleware.",
+        "Enhanced backend reliability with proper error handling, async/await patterns, and clean code structure.",
+        "Deployed backend services using Git/GitHub on platforms like Render and Heroku."
+      ]
+
+
     },
   ],
 
   projects: [
     {
-      title: "Smart Healthcare System",
-      tech: "MERN Stack + WebRTC",
-      duration: "Feb 2025 – June 2025",
+      title: "Digital Healthcare System",
+      duration: "Dec 2024 – Feb 2025",
       github: "https://github.com/gaurav-opensource/Smart-Digital-Healthcare-System",
       points: [
-        "Built a full-stack healthcare platform with role-based access for Admin, Doctor, and Users.",
-        "Integrated real-time video calls, chat, and secure payments for virtual consultations.",
-        "Added AI Heart Disease Prediction (81.1% accuracy) and an AI Medical Report Analyzer.",
-        "Deployed using Docker, Render, and Vercel with Cloudinary storage.",
+        "Built a telemedicine platform with appointment booking, report uploads, and video consultations.",
+        "Added role-based dashboards with secure login, doctor approval, and prescription handling.",
+        "Developed an AI report analyzer using FastAPI and OCR to extract metrics and detect abnormalities.",
+        "Integrated video calling, Cloudinary storage, and smart doctor search for a seamless healthcare workflow."
       ],
     },
     {
-      title: "Smart Recruitment Systeml",
-      tech: "MERN Stack + Judge0 API + ML",
-      duration: "July 2025 – Oct 2025",
+      title: "Automated Recruitment & Coding Assessment Portal",
+      duration: "",
       github: "https://github.com/gaurav-opensource/Smart-Recruitment-System",
       points: [
-        "Developed a full-stack hiring platform to automate recruitment and improve HR–student interaction.",
-        "Built a job portal with ML-based resume scoring and automated coding assessments using Judge0 API.",
-        "Designed a responsive HR dashboard for managing job posts, applicants, evaluations, and results.",
-        "Deployed the platform on Render for reliable hosting and smooth performance.",
+        "Built a full-stack hiring platform with job applications, resume upload, and coding test features.",
+        "Developed an AI resume-scoring system using FastAPI NLP models, improving screening accuracy and reducing manual HR effort.",
+        "Integrated Judge0 API for automated coding evaluations, enabling faster and objective candidate assessment.",
+        "Implemented secure role-based dashboards for students and HR to automate the complete hiring workflow."
+      ]
+
+    },
+    {
+      title: "Heart Disease Prediction",
+      duration: "Jul 2023 – Aug 2023",
+      points: [
+        "Developed logistic model achieving 97% precision.",
+        "Implemented HIPAA-compliant encryption improving safety.",
       ],
     },
   ],
@@ -66,40 +92,40 @@ const resumeData = {
   education: [
     {
       degree: "B.Tech in Computer Science and Engineering",
-      institute: "Hindustan college of science and technology",
-      duration: "July 2023 – Aug 2027",
+      institute: "Hindustan College of Science and Technology",
+      duration: "Jul 2023 – Aug 2027",
       score: "CGPA: 7.61 / 10",
     },
     {
-      degree: "XII (Senior Secondary, PCM)",
+      degree: "Senior Secondary (XII) – PCM",
       institute: "Rastriya Inter College, Agra",
-      duration: "July 2021 – June 2022",
+      duration: "Jul 2021 – Jun 2022",
       score: "Percentage: 75%",
     },
   ],
 
-achievements: [
-  {
-    title: "Smart India Hackathon",
-    desc: "Developed a centralized hiring system to streamline and automate the entire hiring workflow."
-  },
-  {
-    title: "ByteClub (In-College Program)",
-    desc: "Secured 6th rank among 1000+ students in DSA test; completed intensive training program."
-  }
-],
+  achievements: [
+    {
+      title: "Smart India Hackathon",
+      desc: "Built a centralized recruitment system to automate hiring.",
+    },
+    {
+      title: "ByteClub (College Program)",
+      desc: "Ranked 6th among 1000+ students in DSA assessment.",
+    },
+  ],
 
-certifications: [
-  {
-    title: "Apna College",
-    desc: "Full-Stack Development (MERN Stack), built full-stack applications and APIs."
-  },
-  {
-    title: "GeeksforGeeks",
-    desc: "Data Science Program (Python, Machine Learning, Data Analysis, Visualization)."
-  }
-]
-
+  certifications: [
+    {
+      title: "Apna College",
+      desc: "Full-Stack Web Development (MERN Stack).",
+    },
+    {
+      title: "GeeksforGeeks",
+      desc: "Data Science Program (Python, ML, Data Analysis).",
+    },
+  ],
 };
 
 export default resumeData;
+

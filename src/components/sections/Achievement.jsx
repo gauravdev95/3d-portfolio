@@ -1,61 +1,7 @@
 const Achievement = () => {
+  // Achievement component to display achievements section
   return (
     <>
-      <section className="achievement-section">
-        <h1 className="achievement-title">Achievements</h1>
-
-        <div className="achievement-container">
-          {/* DSA Tracker */}
-          <div className="achievement-card">
-            <h2>DSA & Problem Solving</h2>
-
-            <div className="tracker">
-              <div className="tracker-header">
-                <span>Problems Solved</span>
-                <span className="tracker-count">700+</span>
-              </div>
-
-              <div className="tracker-bar">
-                <div className="tracker-fill"></div>
-              </div>
-
-              <p className="tracker-text">
-                Solved <b>700+</b> Data Structures & Algorithms problems on
-                <b> LeetCode</b> and <b>GeeksforGeeks</b>.
-              </p>
-            </div>
-          </div>
-
-          {/* Hackathon */}
-          <div className="achievement-card highlight-card">
-            <h2>Hackathons</h2>
-
-            <div className="badge">🏆 Hackathon</div>
-
-            <p>
-              Participated in <b>Smart India Hackathon</b> and built a
-              <span> Hiring Manager Platform</span> focusing on real-world
-              recruitment automation.
-            </p>
-          </div>
-
-          {/* Rank */}
-          <div className="achievement-card">
-            <h2>Competitive Programming</h2>
-
-            <div className="rank-box">
-              <span className="rank">6</span>
-              <span className="rank-text">th Rank</span>
-            </div>
-
-            <p>
-              Secured <b>6th Rank</b> out of <b>1000+</b> students in
-              <b> Byte Club DSA Test</b>.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CSS inside same file */}
       <style>{`
         .achievement-section {
@@ -197,6 +143,62 @@ const Achievement = () => {
           }
         }
       `}</style>
+
+      {/* Achievement Section */}
+      <section className="achievement-section">
+        <h1 className="achievement-title">Achievements</h1>
+
+        <div className="achievement-container">
+          {/* DSA Tracker */}
+          <div className="achievement-card">
+            <h2>DSA & Problem Solving</h2>
+
+            <div className="tracker">
+              <div className="tracker-header">
+                <span>Problems Solved</span>
+                <span className="tracker-count">700+</span>
+              </div>
+
+              <div className="tracker-bar">
+                <div className="tracker-fill"></div>
+              </div>
+
+              <p className="tracker-text">
+                Solved <b>700+</b> Data Structures & Algorithms problems on
+                <b> LeetCode</b> and <b>GeeksforGeeks</b>.
+              </p>
+            </div>
+          </div>
+
+          {/* Hackathon */}
+          <div className="achievement-card highlight-card">
+            <h2>Hackathons</h2>
+
+            <div className="badge">🏆 Hackathon</div>
+
+            <p>
+              Participated in <b>Smart India Hackathon</b> and built a
+              <span> Hiring Manager Platform</span> focusing on real-world
+              recruitment automation.
+            </p>
+          </div>
+
+          {/* Rank */}
+          <div className="achievement-card">
+            <h2>Competitive Programming</h2>
+
+            <div className="rank-box">
+              <span className="rank">6</span>
+              <span className="rank-text">th Rank</span>
+            </div>
+
+            <p>
+              Secured <b>6th Rank</b> out of <b>1000+</b> students in
+              <b> Byte Club DSA Test</b>.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

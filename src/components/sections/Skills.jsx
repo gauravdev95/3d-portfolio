@@ -115,6 +115,8 @@ const SkillImage = styled.img`
   height: 24px;
 `;
 
+
+// Skills section component to showcase various skills
 const Skills = () => {
   return (
     <Container id="Skills">

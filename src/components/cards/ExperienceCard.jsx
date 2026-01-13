@@ -2,6 +2,7 @@ import React from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import styled from "styled-components";
 
+// Styled components for the ExperienceCard
 const Top = styled.div`
   width: 100%;
   display: flex;
@@ -83,6 +84,8 @@ const ItemWrapper = styled.div`
   gap: 8px;
 `;
 
+
+// ExperienceCard component to display individual experience entries
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -138,5 +141,6 @@ const ExperienceCard = ({ experience }) => {
     </VerticalTimelineElement>
   );
 };
+
 
 export default ExperienceCard;

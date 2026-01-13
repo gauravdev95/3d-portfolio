@@ -1,223 +1,226 @@
-import resumeData from "./resumeData";
-
-
-
-
+import PdfDownload from "./PdfDownload";
 
 const ResumePage = ({ resumeData }) => {
+  if (!resumeData) return null;
   const r = resumeData;
 
   return (
     <>
-      {/* ===== ONE-PAGE CSS ===== */}
+      <PdfDownload />
+
       <style>{`
-        /* A4 PAGE LOCK */
-        #resume {
+       #resume {
           width: 210mm;
-          min-height: 297mm;
-          padding: 18mm;
+          height: auto;             
           margin: auto;
-          background: #fff;
-          box-sizing: border-box;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 12.5px;
-          line-height: 1.35;
+          padding: 18mm;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 12px;
+          line-height: 1.32;
           color: #000;
+          background: #fff;
         }
 
-        /* HEADER */
-        .resume-name {
+        #resume, 
+        #resume * {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+        }
+
+        .name {
           text-align: center;
           font-size: 22px;
           font-weight: 700;
-          letter-spacing: 0.5px;
         }
 
-        .resume-header {
+        .role {
           text-align: center;
-          font-size: 12px;
+          font-size: 13px;
+          font-weight: 600;
+          margin-top: 2px;
+        }
+
+        .contact {
+          text-align: center;
+          font-size: 11px;
           margin-top: 4px;
         }
 
-        .resume-header a {
-          color: #0000ee;
-          text-decoration: underline;
+        .contact span {
+          margin: 0 6px;
+          font-weight:500;
+        }
+
+        .contact a {
           font-weight: 600;
+          color: #1e82a5;
+          text-decoration: none;
         }
 
-        .resume-location {
-          text-align: center;
-          font-size: 11.5px;
-          color: #444;
-          margin-bottom: 8px;
+        hr {
+          height: 2px;
+          border: none;
+          border-top: 1.2px solid #000;
+          margin: 6px 0;
+          background-color: #000;
         }
 
-        /* SECTION TITLE */
         .section-title {
-          margin-top: 12px;
+          text-align: center;
           font-size: 13px;
           font-weight: 700;
-          color: #4a148c;
           text-transform: uppercase;
-          border-bottom: 1.2px solid #4a148c;
-          padding-bottom: 2px;
-          margin-bottom: 6px;
-          letter-spacing: 0.3px;
+          margin: 6px 0 4px;
+          color:#1e82a5;
         }
 
-        /* TEXT */
         p {
           margin: 2px 0;
+          text-align: justify;
         }
 
-        /* SKILLS */
         .skill-line {
-          font-size: 12.5px;
-          margin-bottom: 3px;
+          margin-bottom: 2px;
         }
 
-        /* BLOCKS */
-        .block {
-          margin-bottom: 8px;
-        }
-
-        .block-title {
+        .row {
+          display: flex;
+          justify-content: space-between;
           font-weight: 700;
-          font-size: 12.7px;
+        }
+        .row span{
+          color: #0b6c8f;
         }
 
-        /* LISTS */
+        .subrow {
+          display: flex;
+          justify-content: space-between;
+          font-style: italic;
+          font-size: 11.5px;
+          margin-bottom: 2px;
+        }
+
         ul {
-          margin: 3px 0 0 16px;
+          margin: 2px 0 4px 16px;
           padding: 0;
         }
 
         li {
-          margin-bottom: 3px;
-          text-align: justify;
+          margin-bottom: 2px;
         }
 
-        /* EDUCATION */
-        .edu-row {
+        .edu {
           display: flex;
           justify-content: space-between;
-          font-size: 12.5px;
-        }
-
-        .edu-row span:last-child {
-          font-weight: 600;
-          white-space: nowrap;
-        }
-
-        /* LINKS */
-        .github a {
-          color: #0d47a1;
-          font-weight: 600;
-          text-decoration: none;
-          margin-left: 4px;
-        }
-
-        .github a:hover {
-          text-decoration: underline;
-        }
-
-        /* PREVENT PAGE BREAK */
-        .block,
-        .edu-row,
-        ul,
-        li {
-          page-break-inside: avoid;
+          margin-bottom: 4px;
         }
 
         @page {
-          size: A4;
           margin: 0;
         }
       `}</style>
 
-      {/* ===== RESUME CONTENT ===== */}
       <div id="resume">
+        
         {/* HEADER */}
-        <div className="resume-name">{r.name.toUpperCase()}</div>
+        <div className="name">{r.name.toUpperCase()}</div>
+        <div className="role">{r.role}</div>
 
-        <div className="resume-header">
-          {r.contact.phone} | {r.contact.email}
-          <br />
-          <a href={`https://${r.contact.linkedin}`} target="_blank" rel="noreferrer">
-            {r.contact.linkedin}
-          </a>
-          {" | "}
-          <a href={`https://${r.contact.github}`} target="_blank" rel="noreferrer">
-            {r.contact.github}
-          </a>
+        <div className="contact">
+          <span>{r.contact.phone}</span> |
+          <span>{r.contact.email}</span> |
+          <span>
+            <a href={`https://${r.contact.linkedin}`} target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </span> |
+          <span>
+            <a href={`https://${r.contact.github}`} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </span> |
+          <span>{r.contact.location}</span>
         </div>
 
-        <div className="resume-location">{r.contact.location}</div>
-
-        {/* OBJECTIVE */}
-        <div className="section-title">Career Objective</div>
-        <p>{r.objective}</p>
+        {/* SUMMARY */}
+        <div className="section-title">Professional Summary</div>
+        <hr />
+        <p>{r.summary}</p>
 
         {/* SKILLS */}
-        <div className="section-title">Skills</div>
+        <div className="section-title">Technical Skills</div>
+        <hr />
         {Object.entries(r.skills).map(([k, v]) => (
           <p key={k} className="skill-line">
-            <b>{k}</b>: {v.join(", ")}
+            <b>{k}:</b> {v.join(", ")}
           </p>
         ))}
 
         {/* EXPERIENCE */}
-        <div className="section-title">Experience</div>
+        <div className="section-title">Experience & Training</div>
+        <hr />
         {r.experience.map((e, i) => (
-          <div key={i} className="block">
-            <p className="block-title">
-              {e.role} — {e.company} | {e.duration}
-            </p>
+          <div key={i}>
+            <div className="row">
+              <span>{e.role}</span>
+              <span>{e.duration}</span>
+            </div>
+            <div className="row" style={{ fontWeight: 400 }}>
+              <span>{e.company}</span>
+              <span>{e.location}</span>
+            </div>
             <ul>
               {e.points.map((p, j) => (
                 <li key={j}>{p}</li>
               ))}
             </ul>
+            <div className="subrow">
+              <span>Technologies Used: {e.technologies}</span>
+            </div>
           </div>
         ))}
 
         {/* PROJECTS */}
         <div className="section-title">Projects</div>
+        <hr />
         {r.projects.map((p, i) => (
-          <div key={i} className="block">
-            <p className="block-title">
-              {i + 1}. {p.title} | {p.tech} — {p.duration}
-              <span className="github">
-                <a href={p.github} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-              </span>
-            </p>
-            <ul>
-              {p.points.map((pt, j) => (
-                <li key={j}>{pt}</li>
-              ))}
-            </ul>
+        <div key={i}>
+          <div className="row">
+            <span>{p.title}</span>
+            <span>{p.duration}</span>
           </div>
-        ))}
+
+          {p.github && (
+            <div style={{ fontSize: "11px", margin: "2px 0", color: "#1e82a5" }}>
+              <a href={p.github} target="_blank" rel="noreferrer" style={{ color: "#1e82a5", fontWeight: 600 }}>
+                GitHub Repository
+              </a>
+            </div>
+          )}
+
+          <ul>
+            {p.points.map((pt, j) => (
+              <li key={j}>{pt}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
         {/* EDUCATION */}
         <div className="section-title">Education</div>
+        <hr />
         {r.education.map((e, i) => (
-          <div key={i} className="edu-row">
+          <div key={i} className="edu">
             <span>
-              <b>{e.degree}</b>
-              <br />
-              {e.institute}
+              <b>{e.degree}</b> <br /> {e.institute}
             </span>
-            <span>
-              {e.duration} | {e.score}
-            </span>
+            <span>{e.duration} | {e.score}</span>
           </div>
         ))}
 
         {/* ACHIEVEMENTS */}
         <div className="section-title">Achievements</div>
+        <hr />
         <ul>
           {r.achievements.map((a, i) => (
             <li key={i}>
@@ -228,6 +231,7 @@ const ResumePage = ({ resumeData }) => {
 
         {/* CERTIFICATIONS */}
         <div className="section-title">Certifications</div>
+        <hr />
         <ul>
           {r.certifications.map((c, i) => (
             <li key={i}>
@@ -235,9 +239,13 @@ const ResumePage = ({ resumeData }) => {
             </li>
           ))}
         </ul>
+
       </div>
     </>
   );
 };
 
 export default ResumePage;
+
+
+

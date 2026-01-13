@@ -109,15 +109,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_120p6k8",            // ✅ Your EmailJS service ID
-        "template_w4bafkd",           // ✅ Your EmailJS template ID
-        form.current,                 // ✅ Your form reference
-        "vhibrKemRZZj9o8Wn"            // ✅ Your EmailJS public key
+        "service_120p6k8",            
+        "template_w4bafkd",           
+        form.current,                 
+        "vhibrKemRZZj9o8Wn"          
       )
       .then(
         (result) => {
           alert("✅ Message sent successfully!");
-          form.current.reset(); // ✅ clear the form fields
+          form.current.reset(); 
         },
         (error) => {
           alert("❌ Failed to send message. Check console.");
@@ -163,5 +163,7 @@ const Contact = () => {
     </Container>
   );
 };
+
+
 
 export default Contact;

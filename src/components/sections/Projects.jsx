@@ -37,6 +37,7 @@ const CardContainer = styled.div`
   max-width: 1100px;
 `;
 
+// Projects section component to showcase various projects
 const Projects = () => {
   return (
     <Container id="Projects">

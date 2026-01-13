@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-/* ================= CARD ================= */
+// Styled components for the ProjectCard
 
 const Card = styled.div`
   width: 320px;
-  height: 420px; /* ✅ FIXED SIZE */
+  height: 420px; 
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
   border-radius: 18px;
@@ -41,8 +41,6 @@ const Desc = styled.p`
   font-size: 14px;
   color: ${({ theme }) => theme.text_secondary};
   margin-top: 8px;
-
-  /* ✅ keep text short */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -63,8 +61,6 @@ const IconBtn = styled.a`
     transform: scale(1.15);
   }
 `;
-
-/* ================= MODAL ================= */
 
 const Modal = styled.div`
   position: fixed;
@@ -110,8 +106,8 @@ const ModalLinks = styled.div`
   }
 `;
 
-/* ================= COMPONENT ================= */
 
+// ProjectCard component to display individual project entries
 const ProjectCard = ({ project }) => {
   const [open, setOpen] = useState(false);
 
@@ -159,5 +155,6 @@ const ProjectCard = ({ project }) => {
     </>
   );
 };
+
 
 export default ProjectCard;

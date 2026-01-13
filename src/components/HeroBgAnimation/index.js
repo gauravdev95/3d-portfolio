@@ -1,6 +1,8 @@
 import React from 'react';
 import { Div } from './HeroBgAnimationStyle';
 
+
+// HeroBgAnimation component to render the SVG background animation
 const HeroBgAnimation = () => (
   <Div>
     <svg

@@ -154,10 +154,10 @@ const ResumeButton = styled.a`
 
 const Img = styled.img`
   width: 380px;
-  height: 520px;               /* 🔥 vertical height */
+  height: 520px;               /*  vertical height */
   object-fit: cover;
 
-  border-radius: 50% / 40%;    /* 🔥 oval shape */
+  border-radius: 50% / 40%;    /* oval shape */
   border: 2px solid ${({ theme }) => theme.primary};
 
   @media (max-width: 960px) {
@@ -184,6 +184,7 @@ const HeroBg = styled.div`
   max-width: 1360px;
 `;
 
+// Hero section component to display introduction and hero image
 const Hero = () => {
   return (
     <div id="About">

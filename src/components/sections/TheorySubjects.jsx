@@ -1,79 +1,7 @@
 const TheorySubjects = () => {
   return (
     <>
-      <section className="theory-section">
-        <h1 className="theory-title">Core Theory Subjects</h1>
-
-        <div className="theory-container">
-          {/* DBMS */}
-          <div className="theory-card">
-            <h2>DBMS</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="empty">★</span>
-              <span className="rating-text">4 / 5</span>
-            </div>
-            <p>
-              Strong understanding of <b>Database Design</b>, <b>Normalization</b>,
-              <b> Transactions</b>, <b>Indexing</b>, and <b>SQL</b>.
-            </p>
-          </div>
-
-          {/* OS */}
-          <div className="theory-card">
-            <h2>Operating Systems</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="empty">★</span>
-              <span className="rating-text">4 / 5</span>
-            </div>
-            <p>
-              Knowledge of <b>Processes</b>, <b>Threads</b>, <b>CPU Scheduling</b>,
-              <b> Deadlocks</b>, and <b>Memory Management</b>.
-            </p>
-          </div>
-
-          {/* OOPs */}
-          <div className="theory-card highlight-card">
-            <h2>OOPs</h2>
-            <div className="rating">
-              ★ ★ ★ ★ ★
-              <span className="rating-text">5 / 5</span>
-            </div>
-            <p>
-              Strong grasp of <b>OOP Principles</b> like Encapsulation,
-              Inheritance, Polymorphism, and Abstraction with real coding usage.
-            </p>
-          </div>
-
-          {/* CN */}
-          <div className="theory-card">
-            <h2>Computer Networks</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="empty">★</span>
-              <span className="rating-text">4 / 5</span>
-            </div>
-            <p>
-              Understanding of <b>OSI & TCP/IP models</b>, <b>HTTP/HTTPS</b>,
-              <b> DNS</b>, and <b>Network Security basics</b>.
-            </p>
-          </div>
-
-          {/* System Design */}
-          <div className="theory-card system-card">
-            <h2>System Design</h2>
-            <div className="rating">
-              ★ ★ ★  <span className="empty">★ ★</span>
-              <span className="rating-text">3 / 5</span>
-            </div>
-            <p>
-              Experience in designing <b>scalable systems</b>, understanding
-              <b> client-server architecture</b>, <b>REST APIs</b>,
-              <b> Databases</b>, <b>Caching</b>, and <b>Basic Load Balancing</b>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CSS */}
+      // Inline CSS styles for the TheorySubjects component
       <style>{`
         .theory-section {
           min-height: 100vh;
@@ -159,6 +87,81 @@ const TheorySubjects = () => {
           }
         }
       `}</style>
+
+
+      // TheorySubjects section displaying core theory subjects
+      
+      <section className="theory-section">
+        <h1 className="theory-title">Core Theory Subjects</h1>
+
+        <div className="theory-container">
+          {/* DBMS */}
+          <div className="theory-card">
+            <h2>DBMS</h2>
+            <div className="rating">
+              ★ ★ ★ ★ <span className="empty">★</span>
+              <span className="rating-text">4 / 5</span>
+            </div>
+            <p>
+              Strong understanding of <b>Database Design</b>, <b>Normalization</b>,
+              <b> Transactions</b>, <b>Indexing</b>, and <b>SQL</b>.
+            </p>
+          </div>
+
+          {/* OS */}
+          <div className="theory-card">
+            <h2>Operating Systems</h2>
+            <div className="rating">
+              ★ ★ ★ ★ <span className="empty">★</span>
+              <span className="rating-text">4 / 5</span>
+            </div>
+            <p>
+              Knowledge of <b>Processes</b>, <b>Threads</b>, <b>CPU Scheduling</b>,
+              <b> Deadlocks</b>, and <b>Memory Management</b>.
+            </p>
+          </div>
+
+          {/* OOPs */}
+          <div className="theory-card highlight-card">
+            <h2>OOPs</h2>
+            <div className="rating">
+              ★ ★ ★ ★ ★
+              <span className="rating-text">5 / 5</span>
+            </div>
+            <p>
+              Strong grasp of <b>OOP Principles</b> like Encapsulation,
+              Inheritance, Polymorphism, and Abstraction with real coding usage.
+            </p>
+          </div>
+
+          {/* CN */}
+          <div className="theory-card">
+            <h2>Computer Networks</h2>
+            <div className="rating">
+              ★ ★ ★ ★ <span className="empty">★</span>
+              <span className="rating-text">4 / 5</span>
+            </div>
+            <p>
+              Understanding of <b>OSI & TCP/IP models</b>, <b>HTTP/HTTPS</b>,
+              <b> DNS</b>, and <b>Network Security basics</b>.
+            </p>
+          </div>
+
+          {/* System Design */}
+          <div className="theory-card system-card">
+            <h2>System Design</h2>
+            <div className="rating">
+              ★ ★ ★  <span className="empty">★ ★</span>
+              <span className="rating-text">3 / 5</span>
+            </div>
+            <p>
+              Experience in designing <b>scalable systems</b>, understanding
+              <b> client-server architecture</b>, <b>REST APIs</b>,
+              <b> Databases</b>, <b>Caching</b>, and <b>Basic Load Balancing</b>.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
