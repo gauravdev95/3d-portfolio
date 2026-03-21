@@ -156,7 +156,7 @@ const Achievement = () => {
             <div className="tracker">
               <div className="tracker-header">
                 <span>Problems Solved</span>
-                <span className="tracker-count">700+</span>
+                <span className="tracker-count">800+</span>
               </div>
 
               <div className="tracker-bar">
@@ -164,7 +164,7 @@ const Achievement = () => {
               </div>
 
               <p className="tracker-text">
-                Solved <b>700+</b> Data Structures & Algorithms problems on
+                Solved <b>800+</b> Data Structures & Algorithms problems on
                 <b> LeetCode</b> and <b>GeeksforGeeks</b>.
               </p>
             </div>
@@ -177,9 +177,32 @@ const Achievement = () => {
             <div className="badge">🏆 Hackathon</div>
 
             <p>
-              Participated in <b>Smart India Hackathon</b> and built a
-              <span> Hiring Manager Platform</span> focusing on real-world
-              recruitment automation.
+              Participated in <b>Smart India Hackathon</b> and developed a
+              <span> AI-powered Hiring Platform</span> solving real-world recruitment challenges.
+            </p>
+          </div>
+
+          
+          {/* Competitive Coding */}
+          <div className="achievement-card highlight-card">
+            <h2>
+              Competitive <br /> Coding
+            </h2>
+            <div className="badge">⭐ CodeChef</div>
+            <p>
+              Achieved <b>4★ rating</b> on CodeChef showcasing strong problem-solving
+              and algorithmic skills.
+            </p>
+          </div>
+
+          <div className="achievement-card">
+            <h2>Projects</h2>
+            <div className="rank-box">
+              <span className="rank">25+</span>
+            </div>
+            <p>
+              Built <b>25+ real-world projects</b> including AI Healthcare Platform,
+              Smart Hiring System, and real-time applications.
             </p>
           </div>
 
@@ -193,8 +216,8 @@ const Achievement = () => {
             </div>
 
             <p>
-              Secured <b>6th Rank</b> out of <b>1000+</b> students in
-              <b> Byte Club DSA Test</b>.
+              Secured <b>6th Rank</b> among <b>1000+</b> participants in a competitive
+              DSA contest, demonstrating strong problem-solving ability.
             </p>
           </div>
         </div>

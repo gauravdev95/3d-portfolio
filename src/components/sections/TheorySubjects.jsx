@@ -72,6 +72,20 @@ const TheorySubjects = () => {
           font-weight: 600;
         }
 
+        .half {
+          position: relative;
+          display: inline-block;
+          color: #ccc;
+        }
+
+        .half::before {
+          content: "★";
+          position: absolute;
+          width: 50%;
+          overflow: hidden;
+          color: gold;
+        }
+
         .highlight-card {
           border: 1px solid rgba(255, 183, 3, 0.45);
         }
@@ -99,8 +113,8 @@ const TheorySubjects = () => {
           <div className="theory-card">
             <h2>DBMS</h2>
             <div className="rating">
-              ★ ★ ★ ★ <span className="empty">★</span>
-              <span className="rating-text">4 / 5</span>
+              ★ ★ ★ ★ <span className="half">★</span>
+              <span className="rating-text">4.5 / 5</span>
             </div>
             <p>
               Strong understanding of <b>Database Design</b>, <b>Normalization</b>,
@@ -125,8 +139,8 @@ const TheorySubjects = () => {
           <div className="theory-card highlight-card">
             <h2>OOPs</h2>
             <div className="rating">
-              ★ ★ ★ ★ ★
-              <span className="rating-text">5 / 5</span>
+              ★ ★ ★ ★ <span className="half">★</span>
+              <span className="rating-text">4.5 / 5</span>
             </div>
             <p>
               Strong grasp of <b>OOP Principles</b> like Encapsulation,
@@ -151,8 +165,8 @@ const TheorySubjects = () => {
           <div className="theory-card system-card">
             <h2>System Design</h2>
             <div className="rating">
-              ★ ★ ★  <span className="empty">★ ★</span>
-              <span className="rating-text">3 / 5</span>
+              ★ ★ ★ ★<span className="empty"> ★</span>
+              <span className="rating-text">4 / 5</span>
             </div>
             <p>
               Experience in designing <b>scalable systems</b>, understanding

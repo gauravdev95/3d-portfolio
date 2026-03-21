@@ -64,7 +64,6 @@ const PortfolioPage = () => (
           <Contact />
         </Wrapper>
 
-        <Resumepdf />
         <Footer />
       </div>
     </Body>
@@ -78,12 +77,6 @@ function App() {
         <Routes>
           {/* Home / Portfolio */}
           <Route path="/" element={<PortfolioPage />} />
-
-          {/* Resume Editor */}
-         <Route
-  path="/editor"
-  element={<ResumePage resumeData={resumeData} />}
-/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

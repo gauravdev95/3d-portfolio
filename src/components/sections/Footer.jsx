@@ -5,7 +5,10 @@ import {
 
   LinkedIn,
   Twitter,
+  GitHub,
 } from "@mui/icons-material";
+
+import { SiLeetcode } from "react-icons/si";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -95,12 +98,26 @@ const Footer = () => {
         </Nav>
         <SocialMediaIcons>
           
+          <SocialMediaIcon
+  href={Bio.github}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <GitHub />
+</SocialMediaIcon>
           <SocialMediaIcon href={Bio.twitter} target="display">
             <Twitter />
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display">
             <LinkedIn />
           </SocialMediaIcon>
+          <SocialMediaIcon
+  href={Bio.leetcode}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiLeetcode />
+</SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>&copy; 2024 Gaurav Yadav. All rights reserved.</Copyright>
       </FooterWrapper>

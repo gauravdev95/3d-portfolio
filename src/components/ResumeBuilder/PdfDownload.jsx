@@ -1,47 +1,30 @@
-import html2pdf from "html2pdf.js";
+import { saveAs } from "file-saver";
+import htmlDocx from "html-docx-js/dist/html-docx";
+import juice from "juice";
 
-
-// PdfDownload component to download the resume as a PDF
 const PdfDownload = () => {
-  const downloadPDF = () => {
+  const downloadWord = () => {
     const element = document.getElementById("resume");
     if (!element) return;
 
-    const heightPx = element.scrollHeight;
-    const heightMm = heightPx * 0.264583; // px → mm
+    // GET HTML + INLINE ALL CSS AUTOMATICALLY
+    const htmlWithInlineCss = juice(element.outerHTML);
 
-    const opt = {
-      filename: "Resume.pdf",
-      margin: 0,
-      image: { type: "jpeg", quality: 1 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: {
-        unit: "mm",
-        format: [210, heightMm + 5],   // ⬅️ AUTO HEIGHT
-        orientation: "portrait",
-      },
-      pagebreak: { mode: ["avoid-all"] },
-    };
+    const finalHTML = `
+      <html>
+        <head><meta charset="UTF-8"></head>
+        <body>${htmlWithInlineCss}</body>
+      </html>
+    `;
 
-    html2pdf().set(opt).from(element).save();
+    const blob = htmlDocx.asBlob(finalHTML);
+    saveAs(blob, "Resume.docx");
   };
 
   return (
-    <div style={{ textAlign: "center", margin: "20px 0" }}>
-      <button
-        onClick={downloadPDF}
-        style={{
-          padding: "10px 20px",
-          background: "#000",
-          color: "#fff",
-          border: "none",
-          cursor: "pointer",
-        }}
-      >
-        Download Resume PDF
-      </button>
-    </div>
+    <button onClick={downloadWord}>Download Resume Word File</button>
   );
 };
 
 export default PdfDownload;
+
