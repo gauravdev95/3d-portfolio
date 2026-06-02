@@ -1,225 +1,157 @@
+const achievements = [
+  {
+    title: "DSA & Problem Solving",
+    label: "800+ solved",
+    text: "Solved 800+ Data Structures and Algorithms problems across LeetCode, GeeksforGeeks, and coding practice platforms, building strong foundations in arrays, trees, graphs, dynamic programming, and system-level problem solving.",
+  },
+  {
+    title: "WikiThon 2026",
+    label: "Top 20",
+    text: "Selected in the Top 20 at WikiThon 2026 by AI Valley and Harnoor Singh. Built DevRadar with Team Midnight Inference, an AI career intelligence platform powered by Groq, Claude AI, HydraDB, and live skill graph analysis.",
+  },
+  {
+    title: "Byte Master 2024",
+    label: "Rank 6",
+    text: "Secured Rank 6 among 1000+ participants in Byte Master 2024, a coding challenge by Byte Club, CSE Department, Hindustan College of Science and Technology.",
+  },
+  {
+    title: "Smart India Hackathon",
+    label: "SIH 2025",
+    text: "Built a full-stack AI-powered hiring platform to automate recruitment workflows for students and HR teams with resume screening, dashboards, and secure role-based access.",
+  },
+  {
+    title: "MERN Stack Certificate",
+    label: "Apna College",
+    text: "Completed Full Stack Development training focused on MERN stack development, REST APIs, authentication, responsive UI development, and practical production-style workflows.",
+  },
+  {
+    title: "AI Engineering Focus",
+    label: "LLM + RAG",
+    text: "Built portfolio projects with LLM agents, NLP workflows, RAG-style wiki grounding, Groq and Claude integrations, persistent memory, WebSocket feeds, and autonomous workflow recovery concepts.",
+  },
+];
+
 const Achievement = () => {
-  // Achievement component to display achievements section
   return (
     <>
-      {/* CSS inside same file */}
       <style>{`
         .achievement-section {
-          min-height: 100vh;
           padding: 80px 10%;
-          background: linear-gradient(135deg, #0b0014, #1a062d, #2a0a45);
           color: #ffffff;
           font-family: Poppins, sans-serif;
         }
 
         .achievement-title {
           text-align: center;
-          font-size: 42px;
-          font-weight: 700;
-          margin-bottom: 60px;
+          font-size: 52px;
+          font-weight: 600;
+          margin: 0 0 16px;
+        }
+
+        .achievement-subtitle {
+          max-width: 760px;
+          margin: 0 auto 44px;
+          text-align: center;
+          color: #c9c3dc;
+          font-size: 18px;
+          line-height: 1.7;
         }
 
         .achievement-container {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 30px;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 24px;
+          max-width: 1100px;
+          margin: 0 auto;
         }
 
         .achievement-card {
-          background: rgba(255, 255, 255, 0.06);
-          border-radius: 18px;
-          padding: 30px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          backdrop-filter: blur(12px);
-          transition: all 0.35s ease;
-          position: relative;
+          min-height: 230px;
+          background: rgba(17, 25, 40, 0.83);
+          border-radius: 8px;
+          padding: 24px;
+          border: 1px solid rgba(255, 255, 255, 0.125);
+          box-shadow: rgba(23, 92, 230, 0.15) 0 4px 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .achievement-card:hover {
-          transform: translateY(-12px);
-          box-shadow: 0 15px 40px rgba(160, 90, 255, 0.4);
+          transform: translateY(-6px);
+          box-shadow: rgba(168, 85, 247, 0.28) 0 14px 34px;
+        }
+
+        .achievement-card-header {
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          align-items: flex-start;
         }
 
         .achievement-card h2 {
-          font-size: 22px;
-          margin-bottom: 18px;
-          color: #c89bff;
+          font-size: 21px;
+          line-height: 1.35;
+          margin: 0;
+          color: #ffffff;
         }
 
-        /* Tracker */
-        .tracker-header {
-          display: flex;
-          justify-content: space-between;
-          font-size: 14px;
-          margin-bottom: 6px;
-        }
-
-        .tracker-count {
+        .achievement-label {
+          flex: 0 0 auto;
+          border: 1px solid rgba(255, 183, 3, 0.42);
           color: #ffb703;
-          font-weight: 700;
-        }
-
-        .tracker-bar {
-          width: 100%;
-          height: 10px;
-          background: rgba(255, 255, 255, 0.15);
-          border-radius: 10px;
-          overflow: hidden;
-          margin-bottom: 14px;
-        }
-
-        .tracker-fill {
-          width: 85%;
-          height: 100%;
-          background: linear-gradient(90deg, #a855f7, #ffb703);
-          border-radius: 10px;
-          animation: fill 1.5s ease;
-        }
-
-        @keyframes fill {
-          from {
-            width: 0;
-          }
-          to {
-            width: 85%;
-          }
-        }
-
-        .tracker-text {
-          font-size: 15px;
-          line-height: 1.6;
-        }
-
-        /* Hackathon highlight */
-        .highlight-card {
-          border: 1px solid rgba(255, 183, 3, 0.4);
-        }
-
-        .badge {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background: linear-gradient(135deg, #ffb703, #ff8c00);
-          color: #000;
+          border-radius: 999px;
+          padding: 6px 10px;
           font-size: 12px;
           font-weight: 700;
-          padding: 6px 12px;
-          border-radius: 20px;
+          white-space: nowrap;
         }
 
-        /* Rank */
-        .rank-box {
-          display: flex;
-          align-items: baseline;
-          gap: 6px;
-          margin-bottom: 12px;
-        }
-
-        .rank {
-          font-size: 48px;
-          font-weight: 800;
-          color: #ffb703;
-        }
-
-        .rank-text {
-          font-size: 16px;
-          color: #c89bff;
-        }
-
-        p {
+        .achievement-card p {
+          margin: 0;
           font-size: 15px;
           line-height: 1.7;
-          color: #e6e6e6;
-        }
-
-        span {
-          color: #ffb703;
-          font-weight: 600;
+          color: #d7d3e6;
         }
 
         @media (max-width: 768px) {
+          .achievement-section {
+            padding: 64px 16px;
+          }
+
           .achievement-title {
             font-size: 32px;
+          }
+
+          .achievement-subtitle {
+            font-size: 16px;
+          }
+
+          .achievement-card-header {
+            flex-direction: column;
+            gap: 10px;
           }
         }
       `}</style>
 
-      {/* Achievement Section */}
-      <section className="achievement-section">
+      <section className="achievement-section" id="Achievements">
         <h1 className="achievement-title">Achievements</h1>
+        <p className="achievement-subtitle">
+          Coding milestones, hackathon results, certifications, and applied AI
+          engineering work that support my full-stack development journey.
+        </p>
 
         <div className="achievement-container">
-          {/* DSA Tracker */}
-          <div className="achievement-card">
-            <h2>DSA & Problem Solving</h2>
-
-            <div className="tracker">
-              <div className="tracker-header">
-                <span>Problems Solved</span>
-                <span className="tracker-count">800+</span>
+          {achievements.map((achievement) => (
+            <div className="achievement-card" key={achievement.title}>
+              <div className="achievement-card-header">
+                <h2>{achievement.title}</h2>
+                <span className="achievement-label">{achievement.label}</span>
               </div>
-
-              <div className="tracker-bar">
-                <div className="tracker-fill"></div>
-              </div>
-
-              <p className="tracker-text">
-                Solved <b>800+</b> Data Structures & Algorithms problems on
-                <b> LeetCode</b> and <b>GeeksforGeeks</b>.
-              </p>
+              <p>{achievement.text}</p>
             </div>
-          </div>
-
-          {/* Hackathon */}
-          <div className="achievement-card highlight-card">
-            <h2>Hackathons</h2>
-
-            <div className="badge">🏆 Hackathon</div>
-
-            <p>
-              Participated in <b>Smart India Hackathon</b> and developed a
-              <span> AI-powered Hiring Platform</span> solving real-world recruitment challenges.
-            </p>
-          </div>
-
-          
-          {/* Competitive Coding */}
-          <div className="achievement-card highlight-card">
-            <h2>
-              Competitive <br /> Coding
-            </h2>
-            <div className="badge">⭐ CodeChef</div>
-            <p>
-              Achieved <b>4★ rating</b> on CodeChef showcasing strong problem-solving
-              and algorithmic skills.
-            </p>
-          </div>
-
-          <div className="achievement-card">
-            <h2>Projects</h2>
-            <div className="rank-box">
-              <span className="rank">25+</span>
-            </div>
-            <p>
-              Built <b>25+ real-world projects</b> including AI Healthcare Platform,
-              Smart Hiring System, and real-time applications.
-            </p>
-          </div>
-
-          {/* Rank */}
-          <div className="achievement-card">
-            <h2>Competitive Programming</h2>
-
-            <div className="rank-box">
-              <span className="rank">6</span>
-              <span className="rank-text">th Rank</span>
-            </div>
-
-            <p>
-              Secured <b>6th Rank</b> among <b>1000+</b> participants in a competitive
-              DSA contest, demonstrating strong problem-solving ability.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
     </>

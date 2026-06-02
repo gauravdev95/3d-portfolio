@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-// Styled components for the ProjectCard
-
 const Card = styled.div`
   width: 320px;
-  height: 420px; 
+  min-height: 420px;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
-  border-radius: 18px;
+  border-radius: 8px;
   padding: 18px;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -28,7 +26,7 @@ const Image = styled.img`
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
 `;
 
 const Title = styled.h3`
@@ -75,9 +73,11 @@ const Modal = styled.div`
 const ModalBox = styled.div`
   width: 90%;
   max-width: 600px;
+  max-height: 86vh;
+  overflow-y: auto;
   background: #14001f;
   padding: 30px;
-  border-radius: 18px;
+  border-radius: 8px;
   color: white;
 `;
 
@@ -90,7 +90,7 @@ const Tech = styled.div`
   span {
     background: #a855f7;
     padding: 6px 12px;
-    border-radius: 20px;
+    border-radius: 999px;
     font-size: 13px;
   }
 `;
@@ -107,7 +107,6 @@ const ModalLinks = styled.div`
 `;
 
 
-// ProjectCard component to display individual project entries
 const ProjectCard = ({ project }) => {
   const [open, setOpen] = useState(false);
 
@@ -123,12 +122,14 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <Links onClick={(e) => e.stopPropagation()}>
-          <IconBtn href={project.github} target="_blank">
+          <IconBtn href={project.github} target="_blank" rel="noreferrer">
             <FaGithub />
           </IconBtn>
-          <IconBtn href={project.live} target="_blank">
-            <FaExternalLinkAlt />
-          </IconBtn>
+          {project.live && (
+            <IconBtn href={project.live} target="_blank" rel="noreferrer">
+              <FaExternalLinkAlt />
+            </IconBtn>
+          )}
         </Links>
       </Card>
 
@@ -146,8 +147,8 @@ const ProjectCard = ({ project }) => {
             </Tech>
 
             <ModalLinks>
-              <a href={project.github} target="_blank">GitHub</a>
-              <a href={project.live} target="_blank">Live Demo</a>
+              <a href={project.github} target="_blank" rel="noreferrer">GitHub</a>
+              {project.live && <a href={project.live} target="_blank" rel="noreferrer">Live Demo</a>}
             </ModalLinks>
           </ModalBox>
         </Modal>

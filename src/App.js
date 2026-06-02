@@ -14,10 +14,6 @@ import Footer from "./components/sections/Footer";
 import Achievement from "./components/sections/Achievement";
 import TheorySubjects from "./components/sections/TheorySubjects";
 
-import Resumepdf from "./components/ResumeBuilder/PdfDownload";
-import ResumeEditor from "./components/ResumeBuilder/ResumeEditor";
-import ResumePage from "./components/ResumeBuilder/ResumePage";
-import resumeData from "./components/ResumeBuilder/resumeData.jsx";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -75,7 +71,6 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
         <Routes>
-          {/* Home / Portfolio */}
           <Route path="/" element={<PortfolioPage />} />
         </Routes>
       </BrowserRouter>

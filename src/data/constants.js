@@ -5,10 +5,13 @@ export const Bio = {
   roles: [
        "Full Stack MERN Developer",
        "Backend Engineer",
-       "AI Enthusiast"
+       "AI Enthusiast",
+       "AI Systems Developer",
+       "Open Source Contributor",
+       "Hackathon Builder"
   ],
   description:
-    "Full Stack MERN Developer with experience in building 25+ production-ready applications. Specialized in backend development, REST APIs, authentication, and AI-powered features. Built projects like AI Healthcare Platform and Smart Hiring System. Strong in problem-solving (CodeChef 4★) and focused on scalable, clean solutions.",
+    "Full Stack MERN Developer and AI systems builder with 25+ production-ready applications, 800+ DSA problems solved, and hands-on work across MERN, FastAPI, LLM agents, NLP, RAG, and real-time platforms. Built projects like CORTEX, DevRadar, SmartCare, and an AI Hiring System with clean APIs, scalable data models, and practical AI workflows.",
   github: "https://github.com/gaurav-opensource",
   resume: "https://drive.google.com/file/d/128BErbKKR-p3y_wijNSRrkC5QbhvcA5y/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
@@ -115,14 +118,34 @@ export const skills = [
     title: "Machine Learning",
     skills: [
       {
-        name: "Python (NumPy, Pandas, Matplotlib",
+        name: "Python (NumPy, Pandas, Matplotlib)",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
       {
-        name: "Sk Learn Kit",
+        name: "Scikit-learn",
         image:
           "data:image/png;base64,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",
+      },
+      {
+        name: "LLM Agents",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "RAG",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+      },
+      {
+        name: "NLP",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "Groq / Claude AI",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
       },
     ],
   },
@@ -167,20 +190,23 @@ export const experiences = [
   {
     id: 0,
     img: "https://s3-alpha.figma.com/hub/file/6351831159/978d1f2d-1f99-4244-b39a-1b5769efb983-cover.png",
-    role: "Web Development Intern",
+    role: "Full Stack MERN Developer Intern",
     company: "CodSoft",
-    date: "Dec 2025 – Jan 2026",
+    date: "Dec 2025 - Mar 2026",
     desc: [
-      "Built scalable REST APIs using Node.js and Express.js",
-      "Designed and optimized MongoDB schemas using Mongoose",
-      "Implemented JWT-based authentication and secure routes",
-      "Improved backend performance and structured code architecture"
+      "Built and deployed 2 full-stack MERN applications during a remote internship.",
+      "Designed clean React component architecture and REST APIs for multi-user workflows.",
+      "Implemented JWT authentication with role-based access control.",
+      "Optimized MongoDB schemas with Mongoose indexing and query improvements."
     ],
     skills: [
       "Node.js",
       "Express.js",
       "MongoDB",
+      "Mongoose",
       "REST APIs",
+      "JWT Authentication",
+      "RBAC",
       "JavaScript",
       "Git",
       "GitHub"
@@ -191,21 +217,25 @@ export const experiences = [
   {
     id: 1,
     img: "https://substackcdn.com/image/fetch/$s_!aFzv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa27a43b7-f1ec-4586-9898-5f43c9b7cdbf_1000x1000.jpeg",
-    role: "Front-End Developer Intern",
-    company: "IBM SkillsBuild (CSRBOX)",
-    date: "June 2025 – Aug 2025",
+    role: "Full Stack Software Developer (IBM SkillsBuild)",
+    company: "IBM SkillsBuild - CSRBOX Collaboration",
+    date: "Jun 2025 - Aug 2025",
     desc: [
-      "Built responsive UI using React.js and Tailwind CSS",
-      "Developed reusable components improving maintainability",
-      "Implemented modern layouts using Flexbox and CSS Grid",
-      "Worked on real-world project workflows and frontend architecture"
+      "Developed 3+ full-stack web applications during the IBM SkillsBuild CSR training program.",
+      "Created responsive interfaces with React.js and Tailwind CSS.",
+      "Built RESTful APIs with Node.js and Express.js backed by MongoDB.",
+      "Completed the IBM Full Stack Software Developer Professional Certificate."
     ],
     skills: [
-      "React",
-      "JavaScript",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
       "Tailwind CSS",
-      "HTML",
-      "CSS",
+      "HTML5",
+      "CSS3",
+      "RESTful APIs",
+      "Database Design",
       "GitHub"
     ],
     doc: ""
@@ -213,22 +243,71 @@ export const experiences = [
 
   {
     id: 2,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGGZEbgZrORulbKcuEP0h7B2AfZPWxNcBKQ&s",
-    role: "Open Source Contributor",
-    company: "GirlScript Summer of Code",
-    date: "Oct 2024 – Jan 2025",
+    img: "/assets/AiEvent.jpg",
+    role: "Top 20 Finalist - WikiThon 2026",
+    company: "AI Valley - Harnoor Singh",
+    date: "May 2026",
     desc: [
-      "Enhanced real-time chat application using Socket.io",
-      "Improved message synchronization and real-time updates",
-      "Fixed bugs and optimized application performance",
-      "Collaborated with developers in open-source environment"
+      "Selected in the Top 20 at WikiThon 2026, a 48-hour hackathon.",
+      "Built DevRadar with Team Midnight Inference as an AI-powered career intelligence platform for Indian developers.",
+      "Implemented live skill-gap analysis, startup matching, personalized roadmaps, and a persistent AI career wiki.",
+      "Used Groq Llama 3.3 70B and Claude AI for wiki-grounded guidance and reliability."
     ],
     skills: [
-      "Open Source",
+      "React.js",
       "Node.js",
-      "Socket.io",
-      "JavaScript",
-      "Collaboration"
+      "Express.js",
+      "Groq",
+      "Claude AI",
+      "HydraDB",
+      "LLM Agents",
+      "RAG",
+      "Hackathon"
+    ],
+    doc: ""
+  },
+
+  {
+    id: 3,
+    img: "https://media.licdn.com/dms/image/v2/C4D0BAQHxThueE0HjvQ/company-logo_100_100/company-logo_100_100/0/1652779292404/hindustan_college_of_science_and_technology_logo",
+    role: "Full Stack AI Developer",
+    company: "Smart India Hackathon (SIH)",
+    date: "Sep 2025",
+    desc: [
+      "Built a full-stack AI-powered hiring platform to automate recruitment for students and HR teams.",
+      "Implemented student and HR dashboards, role-based workflows, and secure authentication.",
+      "Integrated AI resume screening, candidate evaluation, and recruitment process automation.",
+      "Designed scalable APIs and database flows for real-world hackathon use cases."
+    ],
+    skills: [
+      "MERN Stack",
+      "AI Integration",
+      "Machine Learning",
+      "Resume Parsing",
+      "Full Stack Development",
+      "Database Design",
+      "Authentication",
+      "Deployment"
+    ],
+    doc: ""
+  },
+  {
+    id: 4,
+    img: "https://media.licdn.com/dms/image/v2/C4D0BAQHxThueE0HjvQ/company-logo_100_100/company-logo_100_100/0/1652779292404/hindustan_college_of_science_and_technology_logo",
+    role: "Rank 6 - Byte Master 2024 Coding Challenge",
+    company: "Hindustan College of Science and Technology",
+    date: "Mar 2024",
+    desc: [
+      "Secured Rank 6 among 1000+ participants in Byte Master 2024 by Byte Club, CSE Department.",
+      "Reached the final round and earned a Certificate of Distinction.",
+      "Strengthened DSA, problem-solving speed, and competitive programming confidence."
+    ],
+    skills: [
+      "DSA",
+      "Competitive Programming",
+      "Problem Solving",
+      "Algorithms",
+      "Coding Challenge"
     ],
     doc: ""
   }
@@ -343,22 +422,38 @@ export const projects = [
   },
 
   {
-    title: "AI Event Concierge",
+    title: "CORTEX",
     description:
-      "AI-powered event planning platform that generates structured event suggestions from natural language input.",
+      "Self-healing autonomous workflow recovery platform with six-agent incident reasoning and live observability.",
     image: "/assets/AiEvent.jpg",
-    github: "https://github.com/gaurav-opensource/ai-event-planner",
-    live: "https://ai-event-planner-tawny.vercel.app",
-    tech: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Gemini API",
-      "Axios",
-      "CSS",
-    ],
+    github: "https://github.com/gaurav-opensource/CORTEX",
+    live: "",
+    tech: ["Python", "FastAPI", "React.js", "TypeScript", "Vite", "xAI Grok", "Vector Memory", "WebSocket"],
     details:
-      "Built an AI-based event planning system that converts user input into structured suggestions including venue, location, cost, and justification. Designed backend APIs to integrate Gemini AI, store results in MongoDB, and implemented history tracking with a clean and responsive UI.",
+      "Built a full-stack autonomous workflow recovery platform that simulates incident detection, diagnosis, and self-healing without manual intervention. Implemented a FastAPI backend for workflows, incidents, recovery orchestration, memory, analytics, and WebSocket event streams, plus a React + Vite dashboard with a live recovery sandbox and observability views.",
+  },
+
+  {
+    title: "DevRadar",
+    description:
+      "AI-powered career intelligence platform with skill graphs, startup matching, and wiki-grounded roadmaps.",
+    image: "/assets/AiEvent.jpg",
+    github: "https://github.com/gaurav-opensource/DevRadar",
+    live: "https://devradar-platform.vercel.app",
+    tech: ["React", "Node.js", "Express.js", "Groq", "Claude AI", "HydraDB", "vis-network", "LLM Pipeline"],
+    details:
+      "Developed an AI-powered career intelligence platform for developers with a live vis-network knowledge graph that maps tech skills, startup compatibility scores, skill gaps, and salary impact data. Engineered a 2-step LLM ingest pipeline that converts raw JDs, URLs, and screenshots into structured wiki pages, then powers wiki-grounded career chat and week-by-week learning roadmaps. Added persistent cross-session memory using HydraDB with an in-memory Map fallback and Groq Llama 3.3 as the primary AI provider with Claude as fallback.",
+  },
+
+  {
+    title: "Realtime Collaborative Whiteboard",
+    description:
+      "Multi-user drawing and collaboration platform with real-time synchronization and cursor tracking using WebSockets.",
+    image: "/assets/AiEvent.jpg",
+    github: "https://github.com/gaurav-opensource/collab-whiteboard",
+    live: "https://collab-whiteboard.vercel.app",
+    tech: ["React", "Tailwind CSS", "HTML5 Canvas", "Node.js", "Express.js", "Socket.IO"],
+    details:
+      "Built a real-time collaborative whiteboard where multiple users can draw, sketch, and interact simultaneously. Implemented Socket.IO for instant synchronization of drawing strokes, user cursors, and session management. Features include multiple pen colors, brush sizes, and clear canvas functionality.",
   },
 ];

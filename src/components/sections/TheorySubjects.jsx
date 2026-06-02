@@ -1,179 +1,163 @@
+const subjects = [
+  {
+    title: "DBMS",
+    rating: "4.5 / 5",
+    level: "90%",
+    text: "Strong understanding of database design, normalization, transactions, indexing, SQL, and schema planning for application backends.",
+  },
+  {
+    title: "Operating Systems",
+    rating: "4 / 5",
+    level: "80%",
+    text: "Knowledge of processes, threads, CPU scheduling, deadlocks, memory management, and core OS concepts used in backend engineering.",
+  },
+  {
+    title: "OOPs",
+    rating: "4.5 / 5",
+    level: "90%",
+    text: "Strong grasp of encapsulation, inheritance, polymorphism, abstraction, and clean object-oriented design in practical coding.",
+  },
+  {
+    title: "Computer Networks",
+    rating: "4 / 5",
+    level: "80%",
+    text: "Understanding of OSI and TCP/IP models, HTTP/HTTPS, DNS, client-server communication, and network security basics.",
+  },
+  {
+    title: "System Design",
+    rating: "4 / 5",
+    level: "80%",
+    text: "Experience designing scalable systems with REST APIs, databases, caching, load balancing basics, and real-time event flows.",
+  },
+];
+
 const TheorySubjects = () => {
   return (
     <>
-      // Inline CSS styles for the TheorySubjects component
       <style>{`
         .theory-section {
-          min-height: 100vh;
           padding: 80px 10%;
-          background: linear-gradient(135deg, #0b0014, #1a062d, #2a0a45);
           color: #ffffff;
           font-family: Poppins, sans-serif;
         }
 
         .theory-title {
           text-align: center;
-          font-size: 42px;
-          font-weight: 700;
-          margin-bottom: 60px;
+          font-size: 52px;
+          font-weight: 600;
+          margin: 0 0 16px;
+        }
+
+        .theory-subtitle {
+          max-width: 720px;
+          margin: 0 auto 44px;
+          text-align: center;
+          color: #c9c3dc;
+          font-size: 18px;
+          line-height: 1.7;
         }
 
         .theory-container {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 30px;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 24px;
+          max-width: 1100px;
+          margin: 0 auto;
         }
 
         .theory-card {
-          background: rgba(255, 255, 255, 0.06);
-          border-radius: 18px;
-          padding: 30px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          backdrop-filter: blur(12px);
-          transition: all 0.35s ease;
+          background: rgba(17, 25, 40, 0.83);
+          border-radius: 8px;
+          padding: 24px;
+          border: 1px solid rgba(255, 255, 255, 0.125);
+          box-shadow: rgba(23, 92, 230, 0.15) 0 4px 24px;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .theory-card:hover {
-          transform: translateY(-12px);
-          box-shadow: 0 15px 40px rgba(160, 90, 255, 0.4);
+          transform: translateY(-6px);
+          box-shadow: rgba(168, 85, 247, 0.28) 0 14px 34px;
+        }
+
+        .theory-card-header {
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          align-items: center;
+          margin-bottom: 16px;
         }
 
         .theory-card h2 {
-          font-size: 22px;
-          margin-bottom: 12px;
-          color: #c89bff;
+          font-size: 21px;
+          line-height: 1.35;
+          margin: 0;
+          color: #ffffff;
         }
 
-        .rating {
-          font-size: 20px;
+        .theory-rating {
           color: #ffb703;
-          margin-bottom: 14px;
+          font-size: 13px;
+          font-weight: 700;
+          white-space: nowrap;
         }
 
-        .empty {
-          color: rgba(255, 255, 255, 0.25);
+        .theory-meter {
+          height: 8px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.14);
+          margin-bottom: 16px;
         }
 
-        .rating-text {
-          font-size: 14px;
-          margin-left: 10px;
-          color: #c89bff;
-          font-weight: 600;
+        .theory-meter span {
+          display: block;
+          height: 100%;
+          border-radius: inherit;
+          background: linear-gradient(90deg, #a855f7, #ffb703);
         }
 
-        p {
+        .theory-card p {
+          margin: 0;
           font-size: 15px;
           line-height: 1.7;
-          color: #e6e6e6;
-        }
-
-        b {
-          color: #ffb703;
-          font-weight: 600;
-        }
-
-        .half {
-          position: relative;
-          display: inline-block;
-          color: #ccc;
-        }
-
-        .half::before {
-          content: "★";
-          position: absolute;
-          width: 50%;
-          overflow: hidden;
-          color: gold;
-        }
-
-        .highlight-card {
-          border: 1px solid rgba(255, 183, 3, 0.45);
-        }
-
-        /* Special feel for System Design */
-        .system-card {
-          border: 1px solid rgba(168, 85, 247, 0.5);
+          color: #d7d3e6;
         }
 
         @media (max-width: 768px) {
+          .theory-section {
+            padding: 64px 16px;
+          }
+
           .theory-title {
             font-size: 32px;
+          }
+
+          .theory-subtitle {
+            font-size: 16px;
           }
         }
       `}</style>
 
-
-      // TheorySubjects section displaying core theory subjects
-      
       <section className="theory-section">
         <h1 className="theory-title">Core Theory Subjects</h1>
+        <p className="theory-subtitle">
+          Computer science foundations I use while building APIs, databases,
+          AI systems, and scalable full-stack products.
+        </p>
 
         <div className="theory-container">
-          {/* DBMS */}
-          <div className="theory-card">
-            <h2>DBMS</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="half">★</span>
-              <span className="rating-text">4.5 / 5</span>
+          {subjects.map((subject) => (
+            <div className="theory-card" key={subject.title}>
+              <div className="theory-card-header">
+                <h2>{subject.title}</h2>
+                <span className="theory-rating">{subject.rating}</span>
+              </div>
+              <div className="theory-meter">
+                <span style={{ width: subject.level }} />
+              </div>
+              <p>{subject.text}</p>
             </div>
-            <p>
-              Strong understanding of <b>Database Design</b>, <b>Normalization</b>,
-              <b> Transactions</b>, <b>Indexing</b>, and <b>SQL</b>.
-            </p>
-          </div>
-
-          {/* OS */}
-          <div className="theory-card">
-            <h2>Operating Systems</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="empty">★</span>
-              <span className="rating-text">4 / 5</span>
-            </div>
-            <p>
-              Knowledge of <b>Processes</b>, <b>Threads</b>, <b>CPU Scheduling</b>,
-              <b> Deadlocks</b>, and <b>Memory Management</b>.
-            </p>
-          </div>
-
-          {/* OOPs */}
-          <div className="theory-card highlight-card">
-            <h2>OOPs</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="half">★</span>
-              <span className="rating-text">4.5 / 5</span>
-            </div>
-            <p>
-              Strong grasp of <b>OOP Principles</b> like Encapsulation,
-              Inheritance, Polymorphism, and Abstraction with real coding usage.
-            </p>
-          </div>
-
-          {/* CN */}
-          <div className="theory-card">
-            <h2>Computer Networks</h2>
-            <div className="rating">
-              ★ ★ ★ ★ <span className="empty">★</span>
-              <span className="rating-text">4 / 5</span>
-            </div>
-            <p>
-              Understanding of <b>OSI & TCP/IP models</b>, <b>HTTP/HTTPS</b>,
-              <b> DNS</b>, and <b>Network Security basics</b>.
-            </p>
-          </div>
-
-          {/* System Design */}
-          <div className="theory-card system-card">
-            <h2>System Design</h2>
-            <div className="rating">
-              ★ ★ ★ ★<span className="empty"> ★</span>
-              <span className="rating-text">4 / 5</span>
-            </div>
-            <p>
-              Experience in designing <b>scalable systems</b>, understanding
-              <b> client-server architecture</b>, <b>REST APIs</b>,
-              <b> Databases</b>, <b>Caching</b>, and <b>Basic Load Balancing</b>.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
     </>
