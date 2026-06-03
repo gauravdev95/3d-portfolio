@@ -243,7 +243,7 @@ export const experiences = [
 
   {
     id: 2,
-    img: "/assets/AiEvent.jpg",
+    img: "/assets/Ai_Valley.jpg",
     role: "Top 20 Finalist - WikiThon 2026",
     company: "AI Valley - Harnoor Singh",
     date: "May 2026",
@@ -269,7 +269,7 @@ export const experiences = [
 
   {
     id: 3,
-    img: "https://media.licdn.com/dms/image/v2/C4D0BAQHxThueE0HjvQ/company-logo_100_100/company-logo_100_100/0/1652779292404/hindustan_college_of_science_and_technology_logo",
+    img: "/assets/SIH.jpg",
     role: "Full Stack AI Developer",
     company: "Smart India Hackathon (SIH)",
     date: "Sep 2025",
@@ -293,7 +293,7 @@ export const experiences = [
   },
   {
     id: 4,
-    img: "https://media.licdn.com/dms/image/v2/C4D0BAQHxThueE0HjvQ/company-logo_100_100/company-logo_100_100/0/1652779292404/hindustan_college_of_science_and_technology_logo",
+    img: "/assets/HCST.jpg",
     role: "Rank 6 - Byte Master 2024 Coding Challenge",
     company: "Hindustan College of Science and Technology",
     date: "Mar 2024",
