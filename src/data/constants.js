@@ -10,7 +10,7 @@ export const Bio = {
   ],
   description:
     "Final-year CSE student and Full Stack + AI systems builder with 25+ production-ready applications, 800+ DSA problems solved, and hands-on work across MERN, FastAPI, LLM agents, RAG, and NLP. Currently building ML pipelines for loan recovery at Infosys Springboard. Built projects like CORTEX, DevRadar, TalentForge, and SmartCare with clean APIs, scalable data models, and practical multi-agent AI workflows.",
-  github: "https://github.com/gaurav-opensource",
+  github: "https://github.com/gauravdev95",
   resume: "https://drive.google.com/file/d/128BErbKKR-p3y_wijNSRrkC5QbhvcA5y/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
   twitter: "https://twitter.com/@gaurav9536webde",
@@ -331,8 +331,8 @@ export const projects = [
     title: "DevRadar",
     description:
       "AI-powered career intelligence platform with skill graphs, startup matching, and wiki-grounded roadmaps.",
-    image: "/assets/AiEvent.jpg",
-    github: "https://github.com/gaurav-opensource/DevRadar",
+    image: "/assets/devradar-graph.jpg",
+    github: "https://github.com/gauravdev95/DevRadar",
     live: "https://devradar-platform.vercel.app",
     tech: ["React", "Node.js", "Express.js", "Groq", "Claude AI", "HydraDB", "vis-network", "LLM Pipeline"],
     details:
@@ -344,7 +344,7 @@ export const projects = [
     description:
       "AI-powered hiring platform with resume screening, coding evaluation, and automated candidate shortlisting.",
     image: "/assets/HR.jpg",
-    github: "https://github.com/gaurav-opensource/Hiring-Platefrom",
+    github: "https://github.com/gauravdev95/Hiring-Platefrom",
     live: "",
     tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "FastAPI", "Sentence Transformers", "Judge0 API", "Redis"],
     details:
@@ -355,8 +355,8 @@ export const projects = [
     title: "CORTEX",
     description:
       "Self-healing autonomous workflow recovery platform with six-agent incident reasoning and live observability.",
-    image: "/assets/AiEvent.jpg",
-    github: "https://github.com/gaurav-opensource/CORTEX",
+    image: "/assets/cortex-observability.jpg",
+    github: "https://github.com/gauravdev95/CORTEX",
     live: "",
     tech: ["Python", "FastAPI", "React.js", "TypeScript", "Vite", "xAI Grok", "Vector Memory", "WebSocket"],
     details:
@@ -368,7 +368,7 @@ export const projects = [
     description:
       "AI-powered telemedicine platform with real-time video consultation and ML-based health insights.",
     image: "/assets/digital.jpg",
-    github: "https://github.com/gaurav-opensource/healthcare",
+    github: "https://github.com/gauravdev95/healthcare",
     live: "https://healthcare-app.vercel.app",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "WebRTC", "OCR", "Scikit-learn"],
     details:
@@ -380,7 +380,7 @@ export const projects = [
     description:
       "Finance analytics dashboard with natural language query support using AI and full Docker-based deployment.",
     image: "/assets/digitalAn.jpg",
-    github: "https://github.com/gaurav-opensource/AI-Powered-Data-Analytics-Platform",
+    github: "https://github.com/gauravdev95/AI-Powered-Data-Analytics-Platform",
     live: "",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Docker", "Python", "Vanna AI", "Groq LLM", "Tailwind CSS"],
     details:
@@ -392,7 +392,7 @@ export const projects = [
     description:
       "Real-time trading system for stock search, portfolio management, and buy/sell execution with secure authentication.",
     image: "/assets/Trading.jpg",
-    github: "https://github.com/gaurav-opensource/Trading-Platfrom",
+    github: "https://github.com/gauravdev95/Trading-Platfrom",
     live: "",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Material UI", "Axios"],
     details:
@@ -404,7 +404,7 @@ export const projects = [
     description:
       "Multi-user drawing and collaboration platform with real-time synchronization and cursor tracking using WebSockets.",
     image: "/assets/AiEvent.jpg",
-    github: "https://github.com/gaurav-opensource/collab-whiteboard",
+    github: "https://github.com/gauravdev95/collab-whiteboard",
     live: "https://collab-whiteboard.vercel.app",
     tech: ["React", "Tailwind CSS", "HTML5 Canvas", "Node.js", "Express.js", "Socket.IO"],
     details:
