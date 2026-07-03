@@ -287,7 +287,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "/assets/school.jpg",
+    img: "/assets/school.png",
     school: "Rashtriya Inter College, Barhan Agra",
     date: "Apr 2021 - Apr 2022",
     grade: "75%",
@@ -296,7 +296,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "/assets/school.jpg",
+    img: "/assets/school.png",
     school: "Rashtriya Inter College, Barhan Agra",
     date: "Apr 2019 - Apr 2020",
     grade: "70%",
@@ -331,7 +331,7 @@ export const projects = [
     title: "DevRadar",
     description:
       "AI-powered career intelligence platform with skill graphs, startup matching, and wiki-grounded roadmaps.",
-    image: "/assets/devradar-graph.jpg",
+    image: "/assets/devradar-graph.png",
     github: "https://github.com/gauravdev95/DevRadar",
     live: "https://devradar-platform.vercel.app",
     tech: ["React", "Node.js", "Express.js", "Groq", "Claude AI", "HydraDB", "vis-network", "LLM Pipeline"],
@@ -355,7 +355,7 @@ export const projects = [
     title: "CORTEX",
     description:
       "Self-healing autonomous workflow recovery platform with six-agent incident reasoning and live observability.",
-    image: "/assets/cortex-observability.jpg",
+    image: "/assets/cortex-observability.png",
     github: "https://github.com/gauravdev95/CORTEX",
     live: "",
     tech: ["Python", "FastAPI", "React.js", "TypeScript", "Vite", "xAI Grok", "Vector Memory", "WebSocket"],
