@@ -305,40 +305,7 @@ export const education = [
   },
 ];
 
-export const certifications = [
-  {
-    id: 0,
-    title: "Google/Kaggle 5-Day AI Agents Intensive",
-    issuer: "Google & Kaggle",
-    date: "2025",
-  },
-  {
-    id: 1,
-    title: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services",
-    date: "2025",
-  },
-];
-
-export const achievements = [
-  "CodeChef 4-star (top 10% globally); 800+ DSA problems solved across LeetCode, CodeChef, and Codeforces",
-  "Top 6 at Byte Master 2024 Coding Challenge (300+ participants); ranked 8th out of 300+ in college-wide aptitude assessment",
-  "Top 20 at WikiThon 2026 (AI Valley) for DevRadar; built TalentForge for Smart India Hackathon (SIH) 2025",
-];
-
 export const projects = [
-  {
-    title: "DevRadar",
-    description:
-      "AI-powered career intelligence platform with skill graphs, startup matching, and wiki-grounded roadmaps.",
-    image: "/assets/devradar-graph.png",
-    github: "https://github.com/gauravdev95/DevRadar",
-    live: "https://devradar-platform.vercel.app",
-    tech: ["React", "Node.js", "Express.js", "Groq", "Claude AI", "HydraDB", "vis-network", "LLM Pipeline"],
-    details:
-      "Architected an AI career platform turning job descriptions and screenshots into a live knowledge graph — skills, startups, and gaps visualized in real time. Engineered a 2-step LLM pipeline (Groq LLaMA 3.3 + Claude fallback) extracting entities from raw JDs/URLs and generating structured wiki pages, enabling users to chat with their own career data. Integrated HydraDB for persistent cross-session memory, delivering personalized welcome screens and urgency alerts across 100+ user sessions.",
-  },
-
   {
     title: "TalentForge (AI Hiring Platform)",
     description:
@@ -349,6 +316,30 @@ export const projects = [
     tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "FastAPI", "Sentence Transformers", "Judge0 API", "Redis"],
     details:
       "Developed a full-stack AI hiring platform automating the entire recruitment lifecycle — job posting, resume screening, coding assessments, and candidate shortlisting. Engineered a FastAPI microservice for semantic resume scoring using SentenceTransformers MiniLM, achieving 82%+ ranking accuracy and cutting manual HR screening time by 50%. Integrated Judge0 API supporting 10+ programming languages for real-time code execution, with role-based dashboards for students and recruiters built on MERN stack with JWT auth.",
+  },
+
+  {
+    title: "Grafted (AI Career Intelligence Platform)",
+    description:
+      "AI-powered career intelligence platform that builds a persistent career memory for developers, connecting their skills, goals, skill gaps, startups, hackathons, and learning roadmap.",
+    image: "/assets/devradar-graph.png",
+    github: "https://github.com/gauravdev95/AI-powered-career-intelligence-platform",
+    live: "https://groundtruth-ai-recruiter-intelligence-nqd5.onrender.com",
+    tech: ["React.js", "Vite", "Node.js", "Express.js", "PostgreSQL", "pgvector", "Gemini AI", "Redis", "vis-network"],
+    details:
+      "Developed an AI-powered career intelligence platform for developers using a custom Career Memory Engine. Built a React and Vite frontend with an interactive knowledge graph and a Node.js/Express backend. Implemented PostgreSQL with pgvector for persistent semantic memory, vector search, relationship-aware retrieval, and six-signal memory ranking. Integrated Gemini for entity extraction, wiki generation, grounded chat, and personalized roadmap generation. Added job-description ingestion, skill-gap analysis, startup and hackathon matching, career journey tracking, and verified AI citations. Designed deterministic fallbacks so core matching, memory, retrieval, and graph features continue working even when the AI provider is unavailable.",
+  },
+
+  {
+    title: "GroundTruth AI (AI-Powered Recruiter Intelligence Platform)",
+    description:
+      "AI-powered recruiter intelligence platform that verifies technical skills using real engineering evidence instead of relying only on resume claims.",
+    image: "/assets/GroundTruth.png",
+    github: "https://github.com/gauravdev95/GroundTruth-AI-Recruiter-Intelligence",
+    live: "https://groundtruth-ai-recruiter-intelligence-nqd5.onrender.com/",
+    tech: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "PostgreSQL", "pgvector", "Neo4j", "RAG", "LLM", "HydraDB"],
+    details:
+      "Built GroundTruth AI, an AI-powered recruiter intelligence platform designed to verify candidate skills through real engineering evidence from GitHub, coding platforms, certificates, projects, and technical interviews. Designed an evidence-based verification engine that classifies skills as VERIFIED, FLAGGED, or REJECTED. Implemented AI-powered candidate analysis, evidence extraction, skill matching, technical interview generation, recruiter dashboards, and transparent candidate ranking. Used RAG, embeddings, PostgreSQL with pgvector, Neo4j, FastAPI, and LLM-based intelligence to connect candidate evidence with job requirements.",
   },
 
   {

@@ -5,9 +5,9 @@ import emailjs from "@emailjs/browser";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center; /* fixed typo */
+  justify-content: center;
   align-items: center;
-  position: relative; /* fixed typo */
+  position: relative;
   z-index: 1;
 `;
 
