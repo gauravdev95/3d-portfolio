@@ -141,10 +141,19 @@ const TextLoop = styled.div`
     font-size: 22px;
     text-align: center;
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    font-size: 18px;
+    min-height: 70px;
+  }
 `;
 
 const Span = styled.span`
   color: ${({ theme }) => theme.primary};
+  white-space: nowrap;
 `;
 
 const SubTitle = styled.p`
@@ -257,6 +266,11 @@ const HeroRightContainer = styled.div`
   justify-content: center;
   position: relative;
 
+  @media (min-width: 961px) {
+    /* optical lift: centers the photo against the headline block */
+    margin-bottom: 56px;
+  }
+
   @media (max-width: 960px) {
     order: 1;
     margin-bottom: 26px;
@@ -266,10 +280,35 @@ const HeroRightContainer = styled.div`
 const FrameWrap = styled.div`
   position: relative;
   width: 340px;
+  filter: drop-shadow(0 26px 54px rgba(0, 0, 0, 0.55));
 
   @media (max-width: 640px) {
     width: 270px;
   }
+`;
+
+/* thin rotating arc ring orbiting outside the photo frame */
+const FrameOrbit = styled.div`
+  position: absolute;
+  inset: -17px;
+  border-radius: 40px;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(168, 85, 247, 0.95) 10%,
+    transparent 24%,
+    transparent 54%,
+    rgba(34, 211, 238, 0.95) 64%,
+    transparent 78%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: spin-slow 11s linear infinite;
+  opacity: 0.85;
+  pointer-events: none;
 `;
 
 const FrameGlow = styled.div`
@@ -292,22 +331,29 @@ const Img = styled.img`
   background: #141428;
 `;
 
-const Badge = styled(motion.div)`
+const Chip = styled(motion.div)`
   position: absolute;
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-radius: 14px;
-  font-size: 13px;
-  font-weight: 600;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   color: #fff;
-  background: rgba(17, 25, 40, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(10, 12, 28, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
   white-space: nowrap;
+
+  @media (max-width: 640px) {
+    font-size: 10px;
+    padding: 6px 10px;
+    gap: 5px;
+  }
 `;
 
 const BadgeDot = styled.span`
@@ -424,29 +470,50 @@ const Hero = () => {
                 >
                   <FrameWrap>
                     <FrameGlow />
+                    <FrameOrbit />
                     <div className="gradient-ring">
                       <Img src={HeroImg} alt="Gaurav Yadav" />
                     </div>
-                    <Badge
-                      style={{ top: "6%", right: "-34px" }}
+                    <Chip
+                      style={{ top: "14px", left: "14px" }}
                       className="animate-floaty"
-                      initial={{ opacity: 0, x: 24 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.9, duration: 0.6 }}
+                      initial={{ opacity: 0, y: -14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.9, duration: 0.5 }}
+                    >
+                      <BadgeDot color="#22d3ee" />
+                      LLM Agents & RAG
+                    </Chip>
+                    <Chip
+                      style={{ top: "14px", right: "14px", animationDelay: "-1.8s" }}
+                      className="animate-floaty"
+                      initial={{ opacity: 0, y: -14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.0, duration: 0.5 }}
                     >
                       <BadgeDot color="#a855f7" />
                       AI/ML Engineer
-                    </Badge>
-                    <Badge
-                      style={{ bottom: "10%", left: "-40px" }}
+                    </Chip>
+                    <Chip
+                      style={{ bottom: "14px", left: "14px", animationDelay: "-3.4s" }}
                       className="animate-floaty"
-                      initial={{ opacity: 0, x: -24 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1.1, duration: 0.6 }}
+                      initial={{ opacity: 0, y: 14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.1, duration: 0.5 }}
                     >
                       <BadgeDot color="#34d399" />
                       Full-Stack Developer
-                    </Badge>
+                    </Chip>
+                    <Chip
+                      style={{ bottom: "14px", right: "14px", animationDelay: "-4.6s" }}
+                      className="animate-floaty chip-lift"
+                      initial={{ opacity: 0, y: 14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.2, duration: 0.5 }}
+                    >
+                      <BadgeDot color="#ffb703" />
+                      800+ DSA Solved
+                    </Chip>
                   </FrameWrap>
                 </Tilt>
               </motion.div>

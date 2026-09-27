@@ -176,7 +176,15 @@ const Skills = () => {
                         whileHover={{ scale: 1.06 }}
                         whileTap={{ scale: 0.96 }}
                       >
-                        <SkillImage src={item.image} alt={item.name} loading="lazy" />
+                        <SkillImage
+                          src={item.image}
+                          alt={item.name}
+                          loading="lazy"
+                          style={item.invert ? { filter: "brightness(0) invert(1)" } : undefined}
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
                         {item.name}
                       </SkillItem>
                     ))}

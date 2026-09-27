@@ -1,11 +1,19 @@
+import reactIcon from "../images/skills/react.svg";
+import javascriptIcon from "../images/skills/javascript.svg";
+import expressIcon from "../images/skills/express.svg";
+import flaskIcon from "../images/skills/flask.svg";
+import materialuiIcon from "../images/skills/materialui.svg";
+import scikitlearnIcon from "../images/skills/scikitlearn.svg";
+import nextjsIcon from "../images/skills/nextjs.svg";
+
 export const Bio = {
   name: "Gaurav Yadav",
   roles: [
     "Full-Stack Developer",
     "AI/ML Engineer",
-    "LLM & Agent Systems Builder",
+    "LLM Agent Builder",
     "Backend Engineer",
-    "Open Source Contributor",
+    "OSS Contributor",
     "Hackathon Finalist",
   ],
   tagline: "I build things that ship — not repos that sit.",
@@ -33,8 +41,7 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiIHRyYW5zZm9ybT0icm90YXRlKDEyMCkiLz4KPC9nPgo8L3N2Zz4K",
+        image: reactIcon,
       },
       {
         name: "Redux",
@@ -43,10 +50,10 @@ export const skills = [
       },
       {
         name: "Next Js",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
+        image: nextjsIcon,
+        invert: true,
       },
-      { name: "JavaScript", image: "data:image/jpeg;base64,/9j/PLACEHOLDER" },
+      { name: "JavaScript", image: javascriptIcon },
       {
         name: "Bootstrap",
         image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
@@ -56,14 +63,15 @@ export const skills = [
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5_2e69uOtFDyshw054-c6MX74M3hy8m3ug&s",
       },
-      { name: "Material UI", image: "data:image/png;base64,iVBORw0KGgoPLACEHOLDER" },
+      { name: "Material UI", image: materialuiIcon },
     ],
   },
   {
     title: "Backend",
     skills: [
       { name: "Node Js", image: "https://nodejs.org/static/images/logo.svg" },
-      { name: "Express Js", image: "data:image/png;base64,iVBORw0KGgoPLACEHOLDER" },
+      { name: "Express Js", image: expressIcon,
+        invert: true },
       {
         name: "Python",
         image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
@@ -71,8 +79,8 @@ export const skills = [
       { name: "FastAPI", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" },
       {
         name: "Flask",
-        image:
-          "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-to-send-sms-messages-with-python-flask-and-vonage/python-flash_sms.png",
+        image: flaskIcon,
+        invert: true,
       },
       {
         name: "MySQL",
@@ -125,7 +133,7 @@ export const skills = [
         name: "Python (NumPy, Pandas, Matplotlib)",
         image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
-      { name: "Scikit-learn", image: "data:image/png;base64,iVBORw0KGgoPLACEHOLDER" },
+      { name: "Scikit-learn", image: scikitlearnIcon },
       {
         name: "NLP (spaCy / NLTK)",
         image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",

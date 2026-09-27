@@ -170,3 +170,10 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/* lift the bottom-right hero chip on small phones so the two bottom chips never overlap */
+@media (max-width: 640px) {
+  .chip-lift {
+    bottom: 58px !important;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
+import Typewriter from "typewriter-effect";
 import { LinkedIn, Twitter, GitHub, Email } from "@mui/icons-material";
 import { SiLeetcode } from "react-icons/si";
 
@@ -105,6 +106,27 @@ const Copyright = styled.p`
   line-height: 1.7;
 `;
 
+const TypedLine = styled.div`
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center;
+
+  & .Typewriter__wrapper {
+    background: linear-gradient(100deg, #c084fc, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  & .Typewriter__cursor {
+    color: #a855f7;
+  }
+`;
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -138,9 +160,22 @@ const Footer = () => {
         </SocialMediaIcons>
         <Copyright>
           &copy; 2026 Gaurav Yadav. All rights reserved.
-          <br />
-          Designed & built by hand — React, Three.js, and too much coffee.
         </Copyright>
+        <TypedLine>
+          <Typewriter
+            options={{
+              strings: [
+                "Designed & built by hand.",
+                "React • Three.js • Motion.",
+                "Ship early. Ship often.",
+              ],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 35,
+              delay: 45,
+            }}
+          />
+        </TypedLine>
       </FooterWrapper>
     </FooterContainer>
   );
