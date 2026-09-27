@@ -1,21 +1,31 @@
 export const Bio = {
   name: "Gaurav Yadav",
   roles: [
-    "Full Stack MERN Developer",
+    "Full-Stack Developer",
     "AI/ML Engineer",
-    "AI Agent & LLM Systems Builder",
+    "LLM & Agent Systems Builder",
     "Backend Engineer",
     "Open Source Contributor",
-    "Hackathon Builder",
+    "Hackathon Finalist",
   ],
+  tagline: "I build things that ship — not repos that sit.",
   description:
-    "Final-year CSE student and Full Stack + AI systems builder with 25+ production-ready applications, 800+ DSA problems solved, and hands-on work across MERN, FastAPI, LLM agents, RAG, and NLP. Currently building ML pipelines for loan recovery at Infosys Springboard. Built projects like CORTEX, DevRadar, TalentForge, and SmartCare with clean APIs, scalable data models, and practical multi-agent AI workflows.",
+    "I'm a final-year CSE undergrad who builds full-stack products and AI systems end to end. Right now I'm an AI/ML intern at Infosys Springboard, working on ML pipelines for loan recovery. So far I've shipped 25+ working applications, solved 800+ DSA problems, and spent a lot of late nights on RAG pipelines, LLM agents, and backends that hold up under real load. If it doesn't run in production, it doesn't count.",
   github: "https://github.com/gauravdev95",
   resume: "https://drive.google.com/file/d/128BErbKKR-p3y_wijNSRrkC5QbhvcA5y/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
-  twitter: "https://twitter.com/@gaurav9536webde",
-  facebook: "https://www.facebook.com/rishav.chanda.165/",
+  twitter: "https://twitter.com/gaurav9536webde",
+  leetcode: "https://leetcode.com/gauravdev95/",
+  email: "gauravyddev@gmail.com",
+  location: "India",
 };
+
+export const stats = [
+  { value: 25, suffix: "+", label: "Projects shipped" },
+  { value: 800, suffix: "+", label: "DSA problems solved" },
+  { value: 600, suffix: "", label: "Day coding streak" },
+  { value: 20, suffix: "", prefix: "Top ", label: "WikiThon 2026 finalist" },
+];
 
 export const skills = [
   {
@@ -24,7 +34,7 @@ export const skills = [
       {
         name: "React Js",
         image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiIHRyYW5zZm9ybT0icm90YXRlKDEyMCkiLz4KPC9nPgo8L3N2Zz4K",
       },
       {
         name: "Redux",
@@ -34,7 +44,7 @@ export const skills = [
       {
         name: "Next Js",
         image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
       },
       { name: "JavaScript", image: "data:image/jpeg;base64,/9j/PLACEHOLDER" },
       {
@@ -155,10 +165,10 @@ export const experiences = [
     company: "Infosys Springboard",
     date: "Apr 2026 - Present",
     desc: [
-      "Cleaned and engineered features from 10,000+ borrower repayment records (transaction history, payment patterns, demographic signals) to prepare model-ready datasets for CreditPathAI's loan recovery pipeline.",
-      "Trained and iterated on ML models to predict borrower repayment behavior, improving prediction accuracy by ~15% through feature engineering and evaluation cycles.",
-      "Developed pipeline components integrating model outputs into CreditPathAI's loan recovery workflow, working in an Agile/Scrum setup with sprint-based delivery.",
-      "Applied prompt engineering techniques with LLM-based models to real-world use cases, strengthening the AI components behind personal projects like CORTEX and DevRadar."
+      "Working on CreditPathAI's loan recovery pipeline — cleaning and engineering features from 10,000+ borrower repayment records (transaction history, payment patterns, demographic signals) to get model-ready datasets.",
+      "Training and iterating ML models to predict borrower repayment behavior; feature engineering and proper evaluation cycles lifted accuracy by ~15%.",
+      "Wiring model outputs into the loan recovery workflow — real pipeline components, not notebooks — in an Agile/Scrum setup with sprint-based delivery.",
+      "Using prompt engineering with LLM-based models on real use cases, which fed directly into the AI side of my own projects like CORTEX and DevRadar.",
     ],
     skills: [
       "Machine Learning",
@@ -169,9 +179,9 @@ export const experiences = [
       "Scikit-learn",
       "Prompt Engineering",
       "Agile/Scrum",
-      "Data Pipelines"
+      "Data Pipelines",
     ],
-    doc: ""
+    doc: "",
   },
 
   {
@@ -181,9 +191,9 @@ export const experiences = [
     company: "CodSoft",
     date: "Dec 2025 - Mar 2026",
     desc: [
-      "Engineered and deployed a full-stack backend (Node.js, Express.js) with optimized MongoDB schemas achieving 20% faster queries.",
-      "Implemented JWT-based authentication with protected, role-based routes.",
-      "Hosted and maintained the deployed application on Render, handling end-to-end backend lifecycle."
+      "Built and deployed a full-stack backend in Node.js + Express with reworked MongoDB schemas that cut query times by ~20%.",
+      "Implemented JWT authentication with protected, role-based routes from scratch.",
+      "Owned the full backend lifecycle on Render — deploys, env config, and keeping it alive.",
     ],
     skills: [
       "Node.js",
@@ -196,9 +206,9 @@ export const experiences = [
       "JavaScript",
       "Render",
       "Git",
-      "GitHub"
+      "GitHub",
     ],
-    doc: ""
+    doc: "",
   },
 
   {
@@ -208,10 +218,10 @@ export const experiences = [
     company: "AI Valley - Harnoor Singh",
     date: "May 2026",
     desc: [
-      "Selected in the Top 20 at WikiThon 2026, a 48-hour hackathon.",
-      "Built DevRadar with Team Midnight Inference as an AI-powered career intelligence platform for Indian developers.",
-      "Implemented live skill-gap analysis, startup matching, personalized roadmaps, and a persistent AI career wiki.",
-      "Used Groq Llama 3.3 70B and Claude AI for wiki-grounded guidance and reliability."
+      "Made the Top 20 at WikiThon 2026, a 48-hour hackathon — then had to actually build the thing in 48 hours.",
+      "Built DevRadar with Team Midnight Inference: an AI career intelligence platform for Indian developers.",
+      "Shipped live skill-gap analysis, startup matching, personalized roadmaps, and a persistent AI career wiki.",
+      "Ran it on Groq Llama 3.3 70B + Claude AI for wiki-grounded, reliable guidance.",
     ],
     skills: [
       "React.js",
@@ -222,9 +232,9 @@ export const experiences = [
       "HydraDB",
       "LLM Agents",
       "RAG",
-      "Hackathon"
+      "Hackathon",
     ],
-    doc: ""
+    doc: "",
   },
 
   {
@@ -234,10 +244,10 @@ export const experiences = [
     company: "Smart India Hackathon (SIH)",
     date: "Sep 2025",
     desc: [
-      "Built TalentForge, a full-stack AI-powered hiring platform automating the entire recruitment lifecycle for students and HR teams.",
-      "Engineered semantic resume screening using SentenceTransformers MiniLM, achieving 82%+ ranking accuracy and cutting manual HR screening time by 50%.",
-      "Integrated Judge0 API supporting 10+ programming languages for real-time code execution as a second-round filter.",
-      "Designed role-based dashboards for students and recruiters with JWT-based authentication."
+      "Built TalentForge — a full-stack AI hiring platform that automates the whole recruitment lifecycle for students and HR teams.",
+      "Wrote the semantic resume screening engine (SentenceTransformers MiniLM): 82%+ ranking accuracy, ~50% less manual HR screening time.",
+      "Integrated Judge0 for real-time code execution across 10+ languages as a second-round filter.",
+      "Designed role-based dashboards for students and recruiters with JWT auth.",
     ],
     skills: [
       "MERN Stack",
@@ -248,9 +258,9 @@ export const experiences = [
       "Redis",
       "Resume Parsing",
       "Authentication",
-      "Deployment"
+      "Deployment",
     ],
-    doc: ""
+    doc: "",
   },
 
   {
@@ -260,19 +270,19 @@ export const experiences = [
     company: "Hindustan College of Science and Technology",
     date: "Mar 2024",
     desc: [
-      "Secured Rank 6 among 300+ participants in Byte Master 2024 by Byte Club, CSE Department.",
-      "Reached the final round and earned a Certificate of Distinction.",
-      "Strengthened DSA, problem-solving speed, and competitive programming confidence."
+      "Finished Rank 6 out of 300+ participants in Byte Master 2024 (Byte Club, CSE Department).",
+      "Made it to the final round and earned a Certificate of Distinction.",
+      "This is where my competitive programming habit really took off — DSA speed and problem-solving under pressure.",
     ],
     skills: [
       "DSA",
       "Competitive Programming",
       "Problem Solving",
       "Algorithms",
-      "Coding Challenge"
+      "Coding Challenge",
     ],
-    doc: ""
-  }
+    doc: "",
+  },
 ];
 
 export const education = [
@@ -282,7 +292,7 @@ export const education = [
     school: "Hindustan College of Science and Technology, Farah Mathura",
     date: "Jul 2023 - Jun 2027",
     grade: "7.6/10 CGPA",
-    desc: "Relevant Coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks. Completed 5+ semesters.",
+    desc: "B.Tech CSE. The coursework that actually stuck with me: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks. Five semesters in, and most of what I build traces back to these classes.",
     degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
   },
   {
@@ -291,7 +301,7 @@ export const education = [
     school: "Rashtriya Inter College, Barhan Agra",
     date: "Apr 2021 - Apr 2022",
     grade: "75%",
-    desc: "Completed Class 12 with Science (Mathematics).",
+    desc: "Class 12, Science with Mathematics. This is where I got serious about problem-solving — and where coding first caught my eye.",
     degree: "UP Board (XII), Science",
   },
   {
@@ -300,8 +310,53 @@ export const education = [
     school: "Rashtriya Inter College, Barhan Agra",
     date: "Apr 2019 - Apr 2020",
     grade: "70%",
-    desc: "Completed Class 10 with Science and Computer.",
+    desc: "Class 10, Science with Computer. First proper exposure to computers as something you build with, not just use.",
     degree: "UP Board (X), Science with Computer",
+  },
+];
+
+export const achievements = [
+  {
+    title: "DSA & Problem Solving",
+    label: "800+ solved",
+    text: "800+ Data Structures and Algorithms problems across LeetCode and GeeksforGeeks. Arrays, trees, graphs, DP — the grind that made system design and interviews feel natural.",
+    proofImage: "/assets/Badge List.png",
+  },
+  {
+    title: "WikiThon 2026",
+    label: "Top 20",
+    text: "Top 20 finish at WikiThon 2026 (AI Valley x Harnoor Singh). 48 hours, one team — Team Midnight Inference — and DevRadar, our AI career intelligence platform on Groq, Claude AI, and HydraDB.",
+  },
+  {
+    title: "Byte Master 2024",
+    label: "Rank 6",
+    text: "Rank 6 out of 300+ participants in Byte Master 2024, the Byte Club coding challenge at Hindustan College. Made the finals, took home a Certificate of Distinction.",
+  },
+  {
+    title: "600-Day Coding Streak",
+    label: "600 days",
+    text: "600 days of showing up and solving something — no breaks, no excuses. Discipline compounds; this streak is proof.",
+    proofGif: "/assets/Leetcode 600 day Beadge.gif",
+  },
+  {
+    title: "Smart India Hackathon",
+    label: "SIH 2025",
+    text: "Built TalentForge at SIH 2025 — a full hiring platform with AI resume screening, live coding assessments, and role-based dashboards. Real product, real demo, real pressure.",
+  },
+  {
+    title: "Open Source Contributor",
+    label: "GSSoC · ECWoC",
+    text: "Contributed through GirlScript Summer of Code and ECWoC — real bug fixes, documentation, and shipped features in open-source repos, not just forks.",
+  },
+  {
+    title: "CodeChef",
+    label: "4-star",
+    text: "4-star rated competitive programmer on CodeChef. Rated contests taught me more about thinking under time pressure than any classroom did.",
+  },
+  {
+    title: "AI Engineering in Production",
+    label: "LLM + RAG",
+    text: "Shipped portfolio-grade AI systems: LLM agents, RAG-grounded wikis, Groq and Claude integrations, persistent vector memory, WebSocket feeds, and autonomous workflow recovery in CORTEX.",
   },
 ];
 
@@ -309,96 +364,96 @@ export const projects = [
   {
     title: "TalentForge (AI Hiring Platform)",
     description:
-      "AI-powered hiring platform with resume screening, coding evaluation, and automated candidate shortlisting.",
+      "End-to-end AI hiring platform — resume screening, live coding tests, and automated shortlisting. Built for SIH 2025.",
     image: "/assets/HR.jpg",
     github: "https://github.com/gauravdev95/Hiring-Platefrom",
     live: "",
     tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "FastAPI", "Sentence Transformers", "Judge0 API", "Redis"],
     details:
-      "Developed a full-stack AI hiring platform automating the entire recruitment lifecycle — job posting, resume screening, coding assessments, and candidate shortlisting. Engineered a FastAPI microservice for semantic resume scoring using SentenceTransformers MiniLM, achieving 82%+ ranking accuracy and cutting manual HR screening time by 50%. Integrated Judge0 API supporting 10+ programming languages for real-time code execution, with role-based dashboards for students and recruiters built on MERN stack with JWT auth.",
+      "I built TalentForge to automate the full recruitment lifecycle — job posting, resume screening, coding assessments, candidate shortlisting. The core is a FastAPI microservice doing semantic resume scoring with SentenceTransformers MiniLM: 82%+ ranking accuracy, roughly half the manual screening time for HR. Judge0 handles real-time code execution in 10+ languages as the second-round filter, and the MERN front end gives students and recruiters their own role-based dashboards behind JWT auth.",
   },
 
   {
     title: "Grafted (AI Career Intelligence Platform)",
     description:
-      "AI-powered career intelligence platform that builds a persistent career memory for developers, connecting their skills, goals, skill gaps, startups, hackathons, and learning roadmap.",
+      "A persistent career memory for developers — skills, gaps, startups, hackathons, and roadmaps in one knowledge graph.",
     image: "/assets/devradar-graph.png",
     github: "https://github.com/gauravdev95/AI-powered-career-intelligence-platform",
     live: "https://groundtruth-ai-recruiter-intelligence-nqd5.onrender.com",
     tech: ["React.js", "Vite", "Node.js", "Express.js", "PostgreSQL", "pgvector", "Gemini AI", "Redis", "vis-network"],
     details:
-      "Developed an AI-powered career intelligence platform for developers using a custom Career Memory Engine. Built a React and Vite frontend with an interactive knowledge graph and a Node.js/Express backend. Implemented PostgreSQL with pgvector for persistent semantic memory, vector search, relationship-aware retrieval, and six-signal memory ranking. Integrated Gemini for entity extraction, wiki generation, grounded chat, and personalized roadmap generation. Added job-description ingestion, skill-gap analysis, startup and hackathon matching, career journey tracking, and verified AI citations. Designed deterministic fallbacks so core matching, memory, retrieval, and graph features continue working even when the AI provider is unavailable.",
+      "Grafted (the DevRadar build) started at WikiThon 2026, where we placed Top 20. It's an AI career intelligence platform with a custom Career Memory Engine: React + Vite front end with an interactive knowledge graph, Node/Express backend, PostgreSQL + pgvector for persistent semantic memory with six-signal memory ranking. Gemini does entity extraction, wiki generation, grounded chat, and roadmap generation. It ingests job descriptions, runs skill-gap analysis, matches startups and hackathons, and tracks your career journey — with deterministic fallbacks so matching, memory, and retrieval keep working even when the AI provider is down.",
   },
 
   {
-    title: "GroundTruth AI (AI-Powered Recruiter Intelligence Platform)",
+    title: "GroundTruth AI (Recruiter Intelligence)",
     description:
-      "AI-powered recruiter intelligence platform that verifies technical skills using real engineering evidence instead of relying only on resume claims.",
+      "Verifies developer skills from real engineering evidence — GitHub, coding platforms, certs — instead of resume claims.",
     image: "/assets/GroundTruth.png",
     github: "https://github.com/gauravdev95/GroundTruth-AI-Recruiter-Intelligence",
     live: "https://groundtruth-ai-recruiter-intelligence-nqd5.onrender.com/",
     tech: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "PostgreSQL", "pgvector", "Neo4j", "RAG", "LLM", "HydraDB"],
     details:
-      "Built GroundTruth AI, an AI-powered recruiter intelligence platform designed to verify candidate skills through real engineering evidence from GitHub, coding platforms, certificates, projects, and technical interviews. Designed an evidence-based verification engine that classifies skills as VERIFIED, FLAGGED, or REJECTED. Implemented AI-powered candidate analysis, evidence extraction, skill matching, technical interview generation, recruiter dashboards, and transparent candidate ranking. Used RAG, embeddings, PostgreSQL with pgvector, Neo4j, FastAPI, and LLM-based intelligence to connect candidate evidence with job requirements.",
+      "Resumes lie; commit histories don't. GroundTruth AI verifies candidate skills against real engineering evidence — GitHub activity, coding platforms, certificates, projects, technical interviews — and classifies every skill as VERIFIED, FLAGGED, or REJECTED. I built the evidence verification engine, AI candidate analysis, skill matching, interview question generation, and recruiter dashboards with transparent ranking, all wired through RAG + embeddings on PostgreSQL/pgvector, Neo4j, and FastAPI.",
   },
 
   {
     title: "CORTEX",
     description:
-      "Self-healing autonomous workflow recovery platform with six-agent incident reasoning and live observability.",
+      "Self-healing workflow recovery — six AI agents that detect, diagnose, and fix incidents without human intervention.",
     image: "/assets/cortex-observability.png",
     github: "https://github.com/gauravdev95/CORTEX",
     live: "",
     tech: ["Python", "FastAPI", "React.js", "TypeScript", "Vite", "xAI Grok", "Vector Memory", "WebSocket"],
     details:
-      "Built a full-stack autonomous workflow recovery platform that simulates incident detection, diagnosis, and self-healing without manual intervention. Implemented a FastAPI backend for workflows, incidents, recovery orchestration, memory, analytics, and WebSocket event streams, plus a React + Vite dashboard with a live recovery sandbox and observability views.",
+      "CORTEX is an autonomous incident-recovery platform: it detects failures, reasons about them with a six-agent pipeline, and heals workflows on its own. I built the FastAPI backend (workflows, incidents, recovery orchestration, vector memory, analytics, WebSocket event streams) and a React + Vite dashboard with a live recovery sandbox and observability views. It's my deep-dive into multi-agent orchestration — the agents argue, vote, and act, and you watch it happen live.",
   },
 
   {
     title: "SmartCare Healthcare Platform",
     description:
-      "AI-powered telemedicine platform with real-time video consultation and ML-based health insights.",
+      "Telemedicine with real video consults plus an ML report analyzer that predicts disease risk from uploaded reports.",
     image: "/assets/digital.jpg",
     github: "https://github.com/gauravdev95/healthcare",
     live: "https://healthcare-app.vercel.app",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "WebRTC", "OCR", "Scikit-learn"],
     details:
-      "Built a telemedicine platform supporting appointment booking, real-time WebRTC video consultations, and JWT-based dashboards for patients, doctors, and admins. Designed an AI report analyzer (OCR + Scikit-learn Random Forest, 80% accuracy) for disease prediction, risk scoring, and specialist recommendations.",
+      "SmartCare is a working telemedicine platform: appointment booking, real-time WebRTC video consultations, and separate dashboards for patients, doctors, and admins behind JWT auth. The interesting part is the AI report analyzer — OCR pulls data from uploaded medical reports, a scikit-learn Random Forest predicts disease risk (80% accuracy), and the system recommends specialists. Real-time, real users, real deployment on Vercel.",
   },
 
   {
     title: "AI-Powered Analytics Platform",
     description:
-      "Finance analytics dashboard with natural language query support using AI and full Docker-based deployment.",
+      "Finance dashboards plus 'chat with your data' — ask in plain English, get SQL, charts, and answers.",
     image: "/assets/digitalAn.jpg",
     github: "https://github.com/gauravdev95/AI-Powered-Data-Analytics-Platform",
     live: "",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Docker", "Python", "Vanna AI", "Groq LLM", "Tailwind CSS"],
     details:
-      "Built an enterprise-grade analytics platform with dashboards for financial insights like spending, invoices, vendor analysis, and cashflow forecasting. Implemented a 'Chat with Data' feature to convert natural language into SQL using AI, execute queries, and visualize results. Fully containerized using Docker for scalable deployment.",
+      "An enterprise-style analytics platform for finance: spending, invoices, vendor analysis, cashflow forecasting. The headline feature is Chat with Data — type a question in plain English, AI converts it to SQL, runs it, and visualizes the result. Next.js front end, PostgreSQL + Prisma, fully containerized with Docker so it deploys anywhere. Built to answer the question every finance team asks: 'what does our data actually say?'",
   },
 
   {
     title: "Trading Platform",
     description:
-      "Real-time trading system for stock search, portfolio management, and buy/sell execution with secure authentication.",
+      "Real-time stock trading app — search, portfolio tracking, and buy/sell execution with secure auth.",
     image: "/assets/Trading.jpg",
     github: "https://github.com/gauravdev95/Trading-Platfrom",
     live: "",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Material UI", "Axios"],
     details:
-      "Developed a trading platform with secure JWT authentication, real-time stock data handling, portfolio tracking, and buy/sell execution. Designed backend APIs for trade management and integrated analytics features like ROI tracking and alerts.",
+      "A full trading system: secure JWT login, real-time stock search, portfolio tracking, and buy/sell execution. I designed the backend trade APIs, added ROI tracking and price alerts, and built the Material UI front end. It handles the full money loop — watchlist to order to portfolio — which taught me a lot about state consistency when numbers actually matter.",
   },
 
   {
     title: "Realtime Collaborative Whiteboard",
     description:
-      "Multi-user drawing and collaboration platform with real-time synchronization and cursor tracking using WebSockets.",
+      "Multi-user drawing board — everyone sketches together live, cursors and strokes syncing in real time.",
     image: "/assets/AiEvent.jpg",
     github: "https://github.com/gauravdev95/collab-whiteboard",
     live: "https://collab-whiteboard.vercel.app",
     tech: ["React", "Tailwind CSS", "HTML5 Canvas", "Node.js", "Express.js", "Socket.IO"],
     details:
-      "Built a real-time collaborative whiteboard where multiple users can draw, sketch, and interact simultaneously. Implemented Socket.IO for instant synchronization of drawing strokes, user cursors, and session management. Features include multiple pen colors, brush sizes, and clear canvas functionality.",
+      "A shared canvas where multiple people draw at once — strokes, cursors, and presence sync instantly over Socket.IO. Multiple pen colors, brush sizes, clear-canvas, and session management. The fun engineering was conflict-free real-time sync: keeping every client's canvas identical at 60fps without flicker. Deployed and demoable on Vercel.",
   },
 ];

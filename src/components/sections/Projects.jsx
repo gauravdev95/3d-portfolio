@@ -2,54 +2,51 @@ import React from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
+import { motion } from "framer-motion";
+import SectionHeading from "../SectionHeading";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
-  padding: 0 16px;
-`;
-
-const Title = styled.h2`
-  font-size: 52px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-
-  @media (max-width: 768px) {
-    font-size: 32px;
-  }
-`;
-
-const Desc = styled.p`
-  font-size: 18px;
-  text-align: center;
-  max-width: 700px;
-  color: ${({ theme }) => theme.text_secondary};
-  margin: 20px 0 40px;
+  margin-top: 70px;
+  padding: 0 16px 20px;
+  position: relative;
+  z-index: 1;
 `;
 
 const CardContainer = styled.div`
   display: flex;
-  gap: 28px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 1150px;
 `;
 
-// Projects section component to showcase various projects
 const Projects = () => {
   return (
     <Container id="Projects">
-      <Title>Projects</Title>
-      <Desc>
-        A collection of real-world projects showcasing Full Stack development,
-        system design thinking, and AI integration.
-      </Desc>
+      <SectionHeading
+        kicker="Selected work"
+        title="Things I've <g>built</g>"
+        subtitle="Every project here runs. Most are deployed, all are on GitHub — click any card for the full story of how it was built."
+      />
 
       <CardContainer>
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.65,
+              delay: (index % 3) * 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          >
+            <ProjectCard project={project} />
+          </motion.div>
         ))}
       </CardContainer>
     </Container>

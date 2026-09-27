@@ -12,30 +12,161 @@ body {
   margin: 0px !important;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  background: #090917;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(133, 76, 230, 0.55);
+  color: #ffffff;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
   height: 80px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #222a35;
+  background: #0d0d1d;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #575c66;
+  background: linear-gradient(180deg, #854ce6, #5b2fb8);
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #626970;
+  background: #a855f7;
 }
 
 ::-webkit-backdrop-filter {
   blur: 3px saturate(106%);
+}
+
+/* ---------- shared animation utilities ---------- */
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes floaty-soft {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1.2deg);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
+  }
+  60% {
+    box-shadow: 0 0 0 9px rgba(52, 211, 153, 0);
+  }
+}
+
+@keyframes shimmer-line {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+  66% {
+    transform: translate(-30px, 25px) scale(0.96);
+  }
+}
+
+.animate-floaty {
+  animation: floaty 5.5s ease-in-out infinite;
+}
+
+.animate-floaty-soft {
+  animation: floaty-soft 7s ease-in-out infinite;
+}
+
+/* gradient text helper */
+.text-gradient {
+  background: linear-gradient(120deg, #a855f7 10%, #7c3aed 45%, #ffb703 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* animated gradient border ring (used by the hero photo frame) */
+.gradient-ring {
+  position: relative;
+  border-radius: 30px;
+  padding: 4px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gradient-ring::before {
+  content: "";
+  position: absolute;
+  inset: -120%;
+  z-index: 0;
+  background: conic-gradient(
+    from 0deg,
+    #854ce6,
+    #22d3ee,
+    #ffb703,
+    #e54d5e,
+    #854ce6
+  );
+  animation: spin-slow 6s linear infinite;
+}
+
+.gradient-ring::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  z-index: 0;
+  border-radius: 26px;
+  background: #0b0b1a;
+}
+
+.gradient-ring > * {
+  position: relative;
+  z-index: 1;
 }

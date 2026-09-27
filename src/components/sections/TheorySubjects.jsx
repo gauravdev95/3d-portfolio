@@ -1,33 +1,36 @@
+import { motion } from "framer-motion";
+import SectionHeading from "../SectionHeading";
+
 const subjects = [
   {
     title: "DBMS",
     rating: "4.5 / 5",
     level: "90%",
-    text: "Strong understanding of database design, normalization, transactions, indexing, SQL, and schema planning for application backends.",
+    text: "Database design, normalization, transactions, indexing, SQL — the stuff behind every schema I've drawn and every slow query I've fixed.",
   },
   {
     title: "Operating Systems",
     rating: "4 / 5",
     level: "80%",
-    text: "Knowledge of processes, threads, CPU scheduling, deadlocks, memory management, and core OS concepts used in backend engineering.",
+    text: "Processes, threads, scheduling, deadlocks, memory management. Shows up whenever I debug why a backend is acting weird.",
   },
   {
     title: "OOPs",
     rating: "4.5 / 5",
     level: "90%",
-    text: "Strong grasp of encapsulation, inheritance, polymorphism, abstraction, and clean object-oriented design in practical coding.",
+    text: "Encapsulation, inheritance, polymorphism, abstraction — and more importantly, knowing when not to over-engineer with them.",
   },
   {
     title: "Computer Networks",
     rating: "4 / 5",
     level: "80%",
-    text: "Understanding of OSI and TCP/IP models, HTTP/HTTPS, DNS, client-server communication, and network security basics.",
+    text: "OSI/TCP-IP, HTTP/HTTPS, DNS, client-server communication. Basically the reason my APIs work over the internet at all.",
   },
   {
     title: "System Design",
     rating: "4 / 5",
     level: "80%",
-    text: "Experience designing scalable systems with REST APIs, databases, caching, load balancing basics, and real-time event flows.",
+    text: "REST APIs, databases, caching, load balancing basics, real-time event flows. I think in systems now, not just endpoints.",
   },
 ];
 
@@ -36,25 +39,9 @@ const TheorySubjects = () => {
     <>
       <style>{`
         .theory-section {
-          padding: 80px 10%;
+          padding: 70px 10% 30px;
           color: #ffffff;
           font-family: Poppins, sans-serif;
-        }
-
-        .theory-title {
-          text-align: center;
-          font-size: 52px;
-          font-weight: 600;
-          margin: 0 0 16px;
-        }
-
-        .theory-subtitle {
-          max-width: 720px;
-          margin: 0 auto 44px;
-          text-align: center;
-          color: #c9c3dc;
-          font-size: 18px;
-          line-height: 1.7;
         }
 
         .theory-container {
@@ -67,16 +54,17 @@ const TheorySubjects = () => {
 
         .theory-card {
           background: rgba(17, 25, 40, 0.83);
-          border-radius: 8px;
-          padding: 24px;
+          border-radius: 18px;
+          padding: 26px;
           border: 1px solid rgba(255, 255, 255, 0.125);
           box-shadow: rgba(23, 92, 230, 0.15) 0 4px 24px;
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .theory-card:hover {
-          transform: translateY(-6px);
-          box-shadow: rgba(168, 85, 247, 0.28) 0 14px 34px;
+          transform: translateY(-8px);
+          border-color: rgba(255, 183, 3, 0.4);
+          box-shadow: rgba(255, 183, 3, 0.16) 0 16px 40px;
         }
 
         .theory-card-header {
@@ -105,58 +93,68 @@ const TheorySubjects = () => {
           height: 8px;
           overflow: hidden;
           border-radius: 999px;
-          background: rgba(255, 255, 255, 0.14);
+          background: rgba(255, 255, 255, 0.12);
           margin-bottom: 16px;
         }
 
-        .theory-meter span {
+        .theory-meter-fill {
           display: block;
           height: 100%;
           border-radius: inherit;
           background: linear-gradient(90deg, #a855f7, #ffb703);
+          box-shadow: 0 0 12px rgba(168, 85, 247, 0.55);
         }
 
         .theory-card p {
           margin: 0;
-          font-size: 15px;
+          font-size: 14.5px;
           line-height: 1.7;
           color: #d7d3e6;
         }
 
         @media (max-width: 768px) {
           .theory-section {
-            padding: 64px 16px;
-          }
-
-          .theory-title {
-            font-size: 32px;
-          }
-
-          .theory-subtitle {
-            font-size: 16px;
+            padding: 56px 16px 20px;
           }
         }
       `}</style>
 
       <section className="theory-section">
-        <h1 className="theory-title">Core Theory Subjects</h1>
-        <p className="theory-subtitle">
-          Computer science foundations I use while building APIs, databases,
-          AI systems, and scalable full-stack products.
-        </p>
+        <SectionHeading
+          kicker="Foundations"
+          title="CS fundamentals I <g>actually use</g>"
+          subtitle="The theory that shows up in my code reviews, schema designs, and 2 AM debugging sessions."
+        />
 
         <div className="theory-container">
-          {subjects.map((subject) => (
-            <div className="theory-card" key={subject.title}>
+          {subjects.map((subject, i) => (
+            <motion.div
+              className="theory-card"
+              key={subject.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.6,
+                delay: (i % 3) * 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               <div className="theory-card-header">
                 <h2>{subject.title}</h2>
                 <span className="theory-rating">{subject.rating}</span>
               </div>
               <div className="theory-meter">
-                <span style={{ width: subject.level }} />
+                <motion.span
+                  className="theory-meter-fill"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: subject.level }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                />
               </div>
               <p>{subject.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

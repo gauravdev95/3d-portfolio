@@ -3,7 +3,7 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { experiences } from "../../data/constants";
 import ExperienceCard from "../cards/ExperienceCard";
-
+import SectionHeading from "../SectionHeading";
 
 const Container = styled.div`
   display: flex;
@@ -13,6 +13,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding-bottom: 10px;
 `;
 
 const Wrapper = styled.div`
@@ -30,47 +31,40 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.div`
-  font-size: 52px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-
-  @media (max-width: 768px) {
-    margin-top: 12px;
-    font-size: 32px;
-  }
-`;
-
-const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
+const TimelineGlow = styled.div`
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 80%;
+  background: linear-gradient(180deg, #854ce6, #ffb703, #854ce6);
+  filter: blur(6px);
+  opacity: 0.35;
+  pointer-events: none;
 `;
 
 const Experience = () => {
   return (
     <Container id="Experience">
       <Wrapper>
-        <Title>Experience</Title>
-        <Desc style={{ marginBottom: "40px" }}>
-          My experience in building scalable applications and working on real-world projects.
-        </Desc>
+        <SectionHeading
+          kicker="Work so far"
+          title="Where I've <g>worked</g>"
+          subtitle="Internships, hackathons, and the teams I built with — each one taught me something I still use."
+        />
 
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
+        <div style={{ position: "relative", width: "100%" }}>
+          <TimelineGlow />
+          <VerticalTimeline lineColor="rgba(133, 76, 230, 0.35)">
+            {experiences.map((experience, index) => (
+              <ExperienceCard
+                key={`experience-${index}`}
+                experience={experience}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
       </Wrapper>
     </Container>
   );
