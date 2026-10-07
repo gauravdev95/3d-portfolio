@@ -18,14 +18,14 @@ export const Bio = {
   ],
   tagline: "I build things that ship — not repos that sit.",
   description:
-    "I'm a final-year CSE undergrad who builds full-stack products and AI systems end to end. Right now I'm an AI/ML intern at Infosys Springboard, working on ML pipelines for loan recovery. So far I've shipped 25+ working applications, solved 800+ DSA problems, and spent a lot of late nights on RAG pipelines, LLM agents, and backends that hold up under real load. If it doesn't run in production, it doesn't count.",
+    "I'm a final-year CSE undergrad who builds full-stack products and AI systems end to end. Former AI/ML intern at Infosys Springboard, where I worked on ML pipelines for loan recovery. So far I've shipped 25+ working applications, solved 800+ DSA problems, and spent a lot of late nights on RAG pipelines, LLM agents, and backends that hold up under real load. If it doesn't run in production, it doesn't count.",
   github: "https://github.com/gauravdev95",
   resume: "https://drive.google.com/file/d/128BErbKKR-p3y_wijNSRrkC5QbhvcA5y/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
   twitter: "https://twitter.com/gaurav9536webde",
   leetcode: "https://leetcode.com/gauravdev95/",
   email: "gauravyddev@gmail.com",
-  location: "India",
+  location: "Agra, India",
 };
 
 export const stats = [
@@ -387,7 +387,7 @@ export const projects = [
       "A persistent career memory for developers — skills, gaps, startups, hackathons, and roadmaps in one knowledge graph.",
     image: "/assets/devradar-graph.png",
     github: "https://github.com/gauravdev95/AI-powered-career-intelligence-platform",
-    live: "https://groundtruth-ai-recruiter-intelligence-nqd5.onrender.com",
+    live: "https://ai-powered-career-intelligence-platform-y3cn.onrender.com/",
     tech: ["React.js", "Vite", "Node.js", "Express.js", "PostgreSQL", "pgvector", "Gemini AI", "Redis", "vis-network"],
     details:
       "Grafted (the DevRadar build) started at WikiThon 2026, where we placed Top 20. It's an AI career intelligence platform with a custom Career Memory Engine: React + Vite front end with an interactive knowledge graph, Node/Express backend, PostgreSQL + pgvector for persistent semantic memory with six-signal memory ranking. Gemini does entity extraction, wiki generation, grounded chat, and roadmap generation. It ingests job descriptions, runs skill-gap analysis, matches startups and hackathons, and tracks your career journey — with deterministic fallbacks so matching, memory, and retrieval keep working even when the AI provider is down.",
