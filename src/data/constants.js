@@ -32,7 +32,7 @@ export const stats = [
   { value: 25, suffix: "+", label: "Projects shipped" },
   { value: 800, suffix: "+", label: "DSA problems solved" },
   { value: 600, suffix: "", label: "Day coding streak" },
-  { value: 20, suffix: "", prefix: "Top ", label: "WikiThon 2026 finalist" },
+  { value: 10, suffix: "", prefix: "Top ", label: "WikiThon 2026 finalist" },
 ];
 
 export const skills = [
@@ -390,7 +390,7 @@ export const projects = [
     live: "https://ai-powered-career-intelligence-platform-y3cn.onrender.com/",
     tech: ["React.js", "Vite", "Node.js", "Express.js", "PostgreSQL", "pgvector", "Gemini AI", "Redis", "vis-network"],
     details:
-      "Grafted (the DevRadar build) started at WikiThon 2026, where we placed Top 20. It's an AI career intelligence platform with a custom Career Memory Engine: React + Vite front end with an interactive knowledge graph, Node/Express backend, PostgreSQL + pgvector for persistent semantic memory with six-signal memory ranking. Gemini does entity extraction, wiki generation, grounded chat, and roadmap generation. It ingests job descriptions, runs skill-gap analysis, matches startups and hackathons, and tracks your career journey — with deterministic fallbacks so matching, memory, and retrieval keep working even when the AI provider is down.",
+      "Grafted (the DevRadar build) started at WikiThon 2026, where we placed Top 10. It's an AI career intelligence platform with a custom Career Memory Engine: React + Vite front end with an interactive knowledge graph, Node/Express backend, PostgreSQL + pgvector for persistent semantic memory with six-signal memory ranking. Gemini does entity extraction, wiki generation, grounded chat, and roadmap generation. It ingests job descriptions, runs skill-gap analysis, matches startups and hackathons, and tracks your career journey — with deterministic fallbacks so matching, memory, and retrieval keep working even when the AI provider is down.",
   },
 
   {
