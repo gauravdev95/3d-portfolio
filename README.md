@@ -6,7 +6,7 @@ A modern, responsive, and beautifully animated personal portfolio website built 
 This portfolio highlights my expertise in **MERN Stack, AI/ML, Full-Stack Development, and Data Engineering**.
 
 👉 **Live Demo:** https://threed-portfolio-msx7.onrender.com/ 
-👉 **GitHub Profile:** https://github.com/gaurav-opensource  
+👉 **GitHub Profile:** https://github.com/gauravdev95  
 
 ---
 
@@ -34,7 +34,6 @@ src/
 │──     canvas/
 │──     cards/
 │──     HeroBgAnimation/
-│──     ResumeBuilder/       ← (Not included in README)
 │── sections/
 │       ├── Hero.jsx
 │       ├── Projects.jsx
@@ -85,12 +84,11 @@ Each project has:
 - Thumbnail  
 
 ### 🧾 **Experience**
-- Full Stack Intern (UPMC)  
 - Real-time chat + notifications  
 - Backend systems + APIs  
 
 ### 🎓 **Education**
-- B.Tech CSE (8.2 CGPA)  
+- B.Tech CSE (7.52 CGPA)  
 - DSA, MERN, AI/ML specialization  
 
 ### 🏆 **Achievements**
@@ -109,7 +107,6 @@ Each project has:
 
 ## 📸 Screenshots
 
-> Add screenshots from your `public/images` folder  
 (example)
 
 | Home Page | Projects Section |
@@ -123,7 +120,7 @@ Each project has:
 Clone the project:
 
 ```bash
-git clone https://github.com/gaurav-opensource/portfolio.git
+git clone https://github.com/gauravdev95/3d-portfolio.git
 cd portfolio
 ````
 
@@ -163,7 +160,7 @@ npm run build
 Full Stack Developer | AI/ML Engineer
 
 🌐 LinkedIn: [https://www.linkedin.com/in/gauravyadav95/](https://www.linkedin.com/in/gauravyadav95/)
-🐙 GitHub: [https://github.com/gaurav-opensource](https://github.com/gaurav-opensource)
+🐙 GitHub: [https://github.com/gauravdev95](https://github.com/gauravdev95)
 
 ---
 

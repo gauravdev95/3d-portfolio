@@ -18,20 +18,20 @@ export const Bio = {
   ],
   tagline: "I build things that ship — not repos that sit.",
   description:
-    "I'm a final-year CSE undergrad who builds full-stack products and AI systems end to end. Former AI/ML intern at Infosys Springboard, where I worked on ML pipelines for loan recovery. So far I've shipped 25+ working applications, solved 800+ DSA problems, and spent a lot of late nights on RAG pipelines, LLM agents, and backends that hold up under real load. If it doesn't run in production, it doesn't count.",
+    "I'm a final-year CSE undergrad who builds full-stack products and AI systems end to end. Former AI/ML intern at Infosys Springboard, where I worked on ML pipelines for loan recovery. So far I've shipped 25+ working applications, solved 864 DSA problems on LeetCode, and spent a lot of late nights on RAG pipelines, LLM agents, and backends that hold up under real load. If it doesn't run in production, it doesn't count.",
   github: "https://github.com/gauravdev95",
   resume: "https://drive.google.com/file/d/128BErbKKR-p3y_wijNSRrkC5QbhvcA5y/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gauravyadav95/",
   twitter: "https://twitter.com/gaurav9536webde",
-  leetcode: "https://leetcode.com/gauravdev95/",
+  leetcode: "https://leetcode.com/gauravDevX/",
   email: "gauravyddev@gmail.com",
   location: "Agra, India",
 };
 
 export const stats = [
   { value: 25, suffix: "+", label: "Projects shipped" },
-  { value: 800, suffix: "+", label: "DSA problems solved" },
-  { value: 600, suffix: "", label: "Day coding streak" },
+  { value: 864, suffix: "", label: "DSA problems solved on LeetCode" },
+  { value: 343, suffix: "", label: "Active days on LeetCode" },
   { value: 10, suffix: "", prefix: "Top ", label: "WikiThon 2026 finalist" },
 ];
 
@@ -299,7 +299,7 @@ export const education = [
     img: "/assets/HCST.jpg",
     school: "Hindustan College of Science and Technology, Farah Mathura",
     date: "Jul 2023 - Jun 2027",
-    grade: "7.6/10 CGPA",
+    grade: "7.52/10 CGPA",
     desc: "B.Tech CSE. The coursework that actually stuck with me: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks. Five semesters in, and most of what I build traces back to these classes.",
     degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
   },
@@ -308,7 +308,7 @@ export const education = [
     img: "/assets/school.png",
     school: "Rashtriya Inter College, Barhan Agra",
     date: "Apr 2021 - Apr 2022",
-    grade: "75%",
+    grade: "74.6%",
     desc: "Class 12, Science with Mathematics. This is where I got serious about problem-solving — and where coding first caught my eye.",
     degree: "UP Board (XII), Science",
   },
@@ -317,7 +317,7 @@ export const education = [
     img: "/assets/school.png",
     school: "Rashtriya Inter College, Barhan Agra",
     date: "Apr 2019 - Apr 2020",
-    grade: "70%",
+    grade: "68%",
     desc: "Class 10, Science with Computer. First proper exposure to computers as something you build with, not just use.",
     degree: "UP Board (X), Science with Computer",
   },
